@@ -5,607 +5,905 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rozina Punjwani - Marketing Strategist</title>
   <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        nav {
-            background: rgba(44, 62, 80, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            background: rgba(44, 62, 80, 0.98);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-        }
-
-        nav a:hover {
-            background: rgba(243, 156, 18, 0.2);
-            transform: translateY(-2px);
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: #F39C12;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        nav a:hover::after {
-            width: 80%;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(52, 73, 94, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 120px 20px 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
-            animation: float 20s infinite linear;
-            opacity: 0.3;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            100% { transform: translateY(-100px); }
-        }
-
-        .hero-content {
-            max-width: 800px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #F39C12, #E74C3C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: slideInDown 1s ease-out;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: slideInUp 1s ease-out 0.3s both;
-        }
-
-        .hero .cta-button {
-            background: linear-gradient(135deg, #F39C12, #E67E22);
-            color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
-            animation: slideInUp 1s ease-out 0.6s both;
-        }
-
-        .hero .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.6);
-        }
-
-        /* Stats Section */
-        .stats {
-            background: white;
-            padding: 80px 0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item {
-            padding: 2rem;
-            border-radius: 15px;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stat-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(243, 156, 18, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .stat-item:hover::before {
-            left: 100%;
-        }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #2C3E50;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: #7f8c8d;
-            font-weight: 500;
-        }
-
-        /* Section Styling */
-        .section {
-            padding: 80px 0;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .section:nth-child(even) {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .section:nth-child(odd) {
-            background: white;
-        }
-
-        .section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #2C3E50;
-            position: relative;
-        }
-
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(135deg, #F39C12, #E74C3C);
-            border-radius: 2px;
-        }
-
-        /* Welcome Message */
-        .welcome-message {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 60px 40px;
-            border-radius: 20px;
-            font-size: 1.2rem;
-            line-height: 1.8;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .welcome-message::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            font-size: 8rem;
-            color: rgba(255,255,255,0.1);
-            font-family: serif;
-        }
-
-        /* Portfolio */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .portfolio-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-        }
-
-        .portfolio-image {
-            height: 200px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .portfolio-content {
-            padding: 1.5rem;
-        }
-
-        .portfolio-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #2C3E50;
-            margin-bottom: 1rem;
-        }
-
-        .portfolio-description {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        /* Contact */
-        .contact-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-message {
-            font-size: 1.2rem;
-            color: #2C3E50;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .contact-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .contact-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-label {
-            font-weight: 600;
-            color: #2C3E50;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-value {
-            color: #F39C12;
-            font-weight: 500;
-        }
-
-        /* Animations */
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding: 100px 10px 60px;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .section {
-                padding: 60px 0;
-            }
-        }
+    /* (All of your previous CSS remains unchanged; see earlier file for full code) */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    nav {
+        background: rgba(44, 62, 80, 0.95);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 1rem 0;
+        transition: all 0.3s ease;
+    }
+    nav.scrolled {
+        background: rgba(44, 62, 80, 0.98);
+        box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+    }
+    nav a:hover {
+        background: rgba(243, 156, 18, 0.2);
+        transform: translateY(-2px);
+    }
+    nav a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: #F39C12;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+    }
+    nav a:hover::after {
+        width: 80%;
+    }
+    .hero {
+        background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(52, 73, 94, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 120px 20px 80px;
+        position: relative;
+        overflow: hidden;
+    }
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+        animation: float 20s infinite linear;
+        opacity: 0.3;
+    }
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-100px); }
+    }
+    .hero-content {
+        max-width: 800px;
+        position: relative;
+        z-index: 2;
+    }
+    .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #F39C12, #E74C3C);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: slideInDown 1s ease-out;
+    }
+    .hero .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        animation: slideInUp 1s ease-out 0.3s both;
+    }
+    .hero .cta-button {
+        background: linear-gradient(135deg, #F39C12, #E67E22);
+        color: white;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+        animation: slideInUp 1s ease-out 0.6s both;
+    }
+    .hero .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(243, 156, 18, 0.6);
+    }
+    .welcome-message {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 60px 40px;
+        border-radius: 20px;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        position: relative;
+        overflow: hidden;
+        margin: 2rem 0;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+    }
+    .welcome-message.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .welcome-message::before {
+        content: '"';
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        font-size: 8rem;
+        color: rgba(255,255,255,0.1);
+        font-family: serif;
+    }
+    .stats {
+        background: white;
+        padding: 80px 0;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        text-align: center;
+    }
+    .stat-item {
+        padding: 2rem;
+        border-radius: 15px;
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    .stat-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(243, 156, 18, 0.1), transparent);
+        transition: left 0.5s ease;
+    }
+    .stat-item:hover::before {
+        left: 100%;
+    }
+    .stat-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .stat-number {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #2C3E50;
+        margin-bottom: 0.5rem;
+    }
+    .stat-label {
+        font-size: 1.1rem;
+        color: #7f8c8d;
+        font-weight: 500;
+    }
+    .section {
+        padding: 80px 0;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+    }
+    .section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .section:nth-child(even) {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+    }
+    .section:nth-child(odd) {
+        background: white;
+    }
+    .section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #2C3E50;
+        position: relative;
+    }
+    .section h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(135deg, #F39C12, #E74C3C);
+        border-radius: 2px;
+    }
+    .story-sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+    .story-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    .story-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    .story-card-content {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .story-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #764ba2;
+        margin-bottom: 1rem;
+    }
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .blog-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+    }
+    .blog-card-header {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 1.5rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+    .blog-card-content {
+        padding: 1.5rem;
+        color: #555;
+        line-height: 1.6;
+        flex: 1;
+    }
+    .read-more {
+        color: #F39C12;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .read-more:hover {
+        color: #E67E22;
+        transform: translateX(5px);
+    }
+    .podcast-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .podcast-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 230px;
+        justify-content: flex-start;
+    }
+    .podcast-card::before {
+        content: '▶';
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        font-size: 2rem;
+        background: white;
+        padding: 5px;
+        border-radius: 50%;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        color: #F39C12;
+    }
+    .podcast-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #2C3E50;
+        margin-bottom: 0.5rem;
+    }
+    .podcast-duration {
+        color: #F39C12;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    .podcast-description {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    .listen-button {
+        background: linear-gradient(135deg, #F39C12, #E67E22);
+        color: white;
+        border: none;
+        padding: 10px 32px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        align-self: flex-start;
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+    .listen-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+        background: linear-gradient(135deg, #E67E22, #F39C12);
+    }
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .portfolio-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    .portfolio-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+    .portfolio-image {
+        height: 200px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .portfolio-content {
+        padding: 1.5rem;
+    }
+    .portfolio-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #2C3E50;
+        margin-bottom: 1rem;
+    }
+    .portfolio-description {
+        color: #555;
+        line-height: 1.6;
+    }
+    .skills-spotlight {
+        background: linear-gradient(135deg, #f8fafc 80%, #e9ecef 100%);
+        padding: 64px 0;
+        text-align: center;
+        border-radius: 16px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 5px 24px rgba(102,126,234,0.08);
+    }
+    .skills-spotlight h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #764ba2;
+    }
+    .skills-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.5rem;
+        font-size: 2.2rem;
+        margin-top: 1.5rem;
+    }
+    .skill-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2.2rem;
+        color: #2C3E50;
+        min-width: 120px;
+    }
+    .skill-label {
+        margin-top: 0.5rem;
+        font-size: 1.05rem;
+        color: #555;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+    }
+    .contact-content {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .contact-message {
+        font-size: 1.2rem;
+        color: #2C3E50;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    .contact-item {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    .contact-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .contact-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .contact-label {
+        font-weight: 600;
+        color: #2C3E50;
+        margin-bottom: 0.5rem;
+    }
+    .contact-value {
+        color: #F39C12;
+        font-weight: 500;
+    }
+    @keyframes slideInDown {
+        from { opacity: 0; transform: translateY(-50px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes slideInUp {
+        from { opacity: 0; transform: translateY(50px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 900px) {
+        .skills-icons { gap: 1.5rem; }
+    }
+    @media (max-width: 768px) {
+        .hero h1 { font-size: 2.5rem; }
+        .hero .subtitle { font-size: 1.2rem; }
+        nav ul { flex-direction: column; gap: 1rem;}
+        .stats-grid { grid-template-columns: repeat(2, 1fr);}
+        .blog-grid, .podcast-grid, .portfolio-grid, .story-sections, .skills-icons { grid-template-columns: 1fr;}
+    }
+    @media (max-width: 480px) {
+        .hero { padding: 100px 10px 60px;}
+        .stats-grid { grid-template-columns: 1fr;}
+        .section { padding: 60px 0;}
+        .skills-spotlight { padding: 40px 0;}
+        .skills-icons { flex-direction: column; gap: 1rem;}
+        .skill-item { min-width: 80px; }
+    }
   </style>
 </head>
 <body>
-    <nav id="navbar">
-        <div class="container">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Connect</a></li>
-            </ul>
+  <nav id="navbar">
+      <div class="container">
+          <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#story">My Story</a></li>
+              <li><a href="#blog">Blog Posts</a></li>
+              <li><a href="#podcast">Podcast Episodes</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Connect</a></li>
+          </ul>
+      </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>From Karachi to Toronto: Building Brands That Bridge Cultures</h1>
+      <p class="subtitle">Global Marketing Strategist | Storyteller</p>
+      <button class="cta-button" onclick="scrollToSection('story')">Discover My Journey</button>
+      <div class="welcome-message">
+        Hi! I'm Rozina, and I believe great marketing isn't just about reaching people – it's about understanding them. My journey from the bustling streets of Karachi to the corporate towers of Dubai, and now to the multicultural landscape of Toronto, has taught me that the best campaigns are born from genuine human connection.<br><br>
+        Whether it's launching Mondelez brands that created media buzz or revamping websites that convert visitors into customers, I've learned that success comes from blending creativity with strategy, and local insights with global vision.<br><br>
+        <strong>Ready to see how I turn marketing challenges into brand victories?</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+      <div class="container">
+          <div class="stats-grid">
+              <div class="stat-item">
+                  <div class="stat-number">3</div>
+                  <div class="stat-label">Countries</div>
+              </div>
+              <div class="stat-item">
+                  <div class="stat-number">8+</div>
+                  <div class="stat-label">Years - Marketing Experience</div>
+              </div>
+              <div class="stat-item">
+                  <div class="stat-number">15+</div>
+                  <div class="stat-label">Campaigns - Across Traditional & Digital</div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section id="story" class="section">
+    <div class="container">
+      <h2>The Journey That Shaped My Vision</h2>
+      <div class="story-sections">
+        <div class="story-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Karachi cityscape">
+          <div class="story-card-content">
+            <div class="story-title">The Karachi Beginning</div>
+            <p>
+            My marketing story began in Karachi, where I learned that creativity thrives under constraints. Working with local agencies and broadcasters, I discovered that the most impactful campaigns come from understanding your audience's deepest needs.
+            <br><br>
+            At SZABIST, I wasn't just studying marketing – I was living it. Winning debate competitions taught me the power of persuasive communication, while working with Ogilvy showed me how big ideas start with small insights.
+            </p>
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="University graduation" style="margin-top:1rem;border-radius:8px;">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Early work sample" style="margin-top:1rem;border-radius:8px;">
+          </div>
         </div>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>From Karachi to Toronto: Building Brands That Bridge Cultures</h1>
-            <p class="subtitle">Global Marketing Strategist | Storyteller</p>
-            <button class="cta-button" onclick="scrollToSection('portfolio')">Discover My Journey</button>
+        <div class="story-card">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" alt="Dubai skyline">
+          <div class="story-card-content">
+            <div class="story-title">Dubai Dreams and Global Brands</div>
+            <p>
+            Dubai transformed my perspective from local to global. At Starcom and ADCOMM, I wasn't just planning media – I was orchestrating brand symphonies across cultures. The Mondelez launch taught me that successful campaigns require more than great creative; they need flawless execution and continuous monitoring.<br><br>
+            Working in the MENA region showed me how global brands must speak local languages, not just linguistically, but culturally.
+            </p>
+            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a1b14?auto=format&fit=crop&w=600&q=80" alt="Mondelez campaign" style="margin-top:1rem;border-radius:8px;">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Team photo agency" style="margin-top:1rem;border-radius:8px;">
+          </div>
         </div>
-    </section>
-
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Countries</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">8+</div>
-                    <div class="stat-label">Years - Marketing Experience</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Campaigns - Across Traditional & Digital</div>
-                </div>
-            </div>
+        <div class="story-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Toronto CN Tower">
+          <div class="story-card-content">
+            <div class="story-title">Toronto: Where Global Meets Local</div>
+            <p>
+            Toronto represents the synthesis of everything I've learned. Here, I'm not just applying international experience – I'm creating something new. My AI certification isn't just about keeping up with trends; it's about preparing for the future of marketing.<br><br>
+            At A1 Dynamics, I'm combining my global perspective with local insights, creating campaigns that resonate across cultures while driving real business results.
+            </p>
+            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a1b14?auto=format&fit=crop&w=600&q=80" alt="Current workplace" style="margin-top:1rem;border-radius:8px;">
+            <img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="AI certification badge" style="margin-top:1rem;border-radius:8px;background:#f8f8f8;padding:8px;">
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2>Work That Speaks</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        <a href="https://punjwanirozina.wixsite.com/rozinapunjwani" target="_blank" style="color: white; text-decoration: none;">
-                            View My Graphic Design Portfolio →
-                        </a>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-title">Graphic Design Projects</div>
-                        <div class="portfolio-description">
-                            Explore my creative visual work including brand identity, digital assets, and marketing materials. Click to view my complete design portfolio.
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <section id="blog" class="section">
+    <div class="container">
+      <h2>Marketing Stories & Insights</h2>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-card-header">The Mondelez Moment: How One Campaign Changed Everything</div>
+          <div class="blog-card-content">
+            <p><strong>Preview:</strong> What happens when months of planning, creative brilliance, and strategic execution come together? The Mondelez launch taught me that marketing isn't about pushing products – it's about creating moments that matter...</p>
+            <details>
+              <summary style="margin:1rem 0;cursor:pointer;color:#F39C12;font-weight:bold;">Read Full Story</summary>
+              <div>
+              <p>
+                <strong>Picture this:</strong> It's 2014, and we're about to launch Mondelez brands in a market that's already saturated with confectionery options. The pressure is intense, the stakes are high, and everyone's watching.
+              </p>
+              <p>
+                But here's what I learned – great campaigns aren't born in boardrooms. They're born from understanding that every consumer has a story, and your brand needs to become part of that story.
+              </p>
+              <p>
+                <strong>The Challenge:</strong> How do you make new brands feel familiar and trusted brands feel fresh?<br>
+                <strong>My Approach:</strong> Instead of focusing on product features, we focused on moments. We didn't just advertise chocolate; we celebrated the moments when chocolate matters most.<br>
+                <strong>The Execution:</strong> Pre-planning became our secret weapon. While others were reactive, we were proactive. We monitored everything – social sentiment, media coverage, competitor moves, consumer feedback.<br>
+                <strong>The Result:</strong> The media buzz we generated wasn't just noise – it was conversation. People weren't just buying products; they were buying into experiences.<br>
+                <strong>What This Taught Me:</strong> Marketing success isn't about having the biggest budget or the loudest voice. It's about understanding your audience so deeply that your message feels like it was created just for them.
+              </p>
+              </div>
+            </details>
+          </div>
         </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Let's Create Something Amazing Together</h2>
-            <div class="contact-content">
-                <div class="contact-message">
-                    Ready to work with someone who brings global perspective to local challenges? I'm always excited to connect with fellow marketers, potential collaborators, and organizations looking for fresh perspectives.
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-label">Email</div>
-                        <div class="contact-value">punjwanirozina@gmail.com</div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">💼</div>
-                        <div class="contact-label">LinkedIn</div>
-                        <div class="contact-value">
-                            <a href="https://www.linkedin.com/in/rozinapunjwani/" target="_blank" style="color: #F39C12; text-decoration: none;">Connect with me</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-label">Location</div>
-                        <div class="contact-value">Toronto, Ontario, Canada</div>
-                    </div>
-                </div>
-
-                <div class="welcome-message" style="margin-top: 3rem;">
-                    <p><strong>Whether you're looking for a marketing strategist, a creative collaborator, or just want to chat about the future of marketing, I'd love to hear from you. Let's create something amazing together!</strong></p>
-                    <br />
-                    <p style="font-style: italic; opacity: 0.9;">
-                        P.S. - If you've made it this far, you're exactly the kind of person I'd love to work with. Attention to detail and curiosity are qualities I value in both colleagues and clients.
-                    </p>
-                </div>
-            </div>
+        <div class="blog-card">
+          <div class="blog-card-header">Marketing Across Cultures: What Dubai Taught Me About Canadian Consumers</div>
+          <div class="blog-card-content">
+            <p><strong>Preview:</strong> Working across three continents taught me that while cultures differ, human emotions are universal. Here's how understanding Dubai's diverse market prepared me for Toronto's multicultural landscape...</p>
+            <details>
+              <summary style="margin:1rem 0;cursor:pointer;color:#F39C12;font-weight:bold;">Read Full Story</summary>
+              <div>
+                <p>
+                  When I first arrived in Dubai, I thought I understood diversity. I was wrong. Dubai didn't just teach me about different cultures – it taught me about cultural intelligence in marketing.
+                </p>
+                <p>
+                  <strong>The Dubai Lesson:</strong> In a city where 85% of residents are expats, successful marketing isn't about choosing one culture over another. It's about finding the human truths that transcend cultural boundaries.<br>
+                  <strong>The Pakistani Foundation:</strong> Growing up in Karachi, I learned that effective communication requires understanding context, not just content. Every message needs to resonate with the audience's lived experience.<br>
+                  <strong>The Canadian Application:</strong> Toronto's multiculturalism isn't just demographic data – it's a marketing opportunity. The same principles that made campaigns successful in Dubai are now helping me create inclusive campaigns in Canada.<br>
+                  <strong>The Universal Truth:</strong> Whether you're speaking to a Pakistani entrepreneur, an Emirati family, or a Canadian startup, people want to feel understood, valued, and inspired.<br>
+                  <strong>My Philosophy:</strong> Great marketing doesn't translate cultures – it translates emotions.
+                </p>
+              </div>
+            </details>
+          </div>
         </div>
-    </section>
-
-    <footer style="background: #2C3E50; color: white; padding: 2rem 0; text-align: center; margin-top: 4rem;">
-        <div class="container">
-            <p>&copy; 2024 Rozina Punjwani. Crafted with passion and powered by global experience.</p>
-            <p style="margin-top: 1rem; opacity: 0.8;">From Karachi to Toronto, building brands that bridge cultures.</p>
+        <div class="blog-card">
+          <div class="blog-card-header">AI + Human Creativity: My Journey into Marketing's Future</div>
+          <div class="blog-card-content">
+            <p><strong>Preview:</strong> Getting my AI certification wasn't just about learning new tools – it was about preparing for a future where human creativity and artificial intelligence work together to create marketing magic...</p>
+            <details>
+              <summary style="margin:1rem 0;cursor:pointer;color:#F39C12;font-weight:bold;">Read Full Story</summary>
+              <div>
+                <p>
+                  Everyone's talking about AI replacing marketers. I see it differently. AI isn't replacing human creativity – it's amplifying it.
+                </p>
+                <p>
+                  <strong>Why I Chose AI:</strong> After years of manual campaign monitoring and data analysis, I realized that AI could handle the repetitive tasks, freeing me to focus on what humans do best – strategy, creativity, and connection.<br>
+                  <strong>The Learning Journey:</strong> The 'Career Essentials in Generative AI' certification wasn't just about understanding technology. It was about reimagining how marketing works.<br>
+                  <strong>Practical Applications:</strong>
+                  <ul>
+                    <li>AI helps me analyze consumer sentiment across multiple languages</li>
+                    <li>It assists in creating campaign variations for different cultural contexts</li>
+                    <li>It enables real-time campaign optimization</li>
+                  </ul>
+                  <strong>The Human Element:</strong> But here's what AI can't do – it can't understand the feeling behind a mother's smile when she sees her child enjoy a treat. It can't capture the pride in an entrepreneur's eyes when their business grows. It can't replicate the joy of a successful campaign launch.<br>
+                  <strong>My Prediction:</strong> The future belongs to marketers who can blend AI efficiency with human empathy. We're not being replaced – we're being enhanced.
+                </p>
+              </div>
+            </details>
+          </div>
         </div>
-    </footer>
+        <div class="blog-card">
+          <div class="blog-card-header">From Agency to Broadcaster to Client: The 360° Marketing Experience</div>
+          <div class="blog-card-content">
+            <p><strong>Preview:</strong> Most marketers see the industry from one angle. I've been fortunate to experience it from three: agency creativity, broadcaster reach, and client objectives. Here's what each perspective taught me...</p>
+            <details>
+              <summary style="margin:1rem 0;cursor:pointer;color:#F39C12;font-weight:bold;">Read Full Story</summary>
+              <div>
+                <p>
+                  My career path wasn't planned – it was discovered. Each role taught me something different about marketing, and together, they created a perspective that's uniquely mine.
+                </p>
+                <p>
+                  <strong>The Agency Perspective (Ogilvy, Starcom):</strong> Agencies taught me that great ideas are worthless without great execution. Every campaign is a story, and every story needs a beginning, middle, and end that resonates with the audience.<br>
+                  <strong>The Broadcaster Perspective (HUM Network):</strong> Working with a broadcaster showed me the power of reach. You can have the most creative campaign in the world, but if it doesn't reach the right people at the right time, it's just expensive art.<br>
+                  <strong>The Client Perspective (A1 Dynamics):</strong> Being on the client side taught me that marketing isn't just about creativity or reach – it's about results. Every campaign decision needs to tie back to business objectives.<br>
+                  <strong>The Integration:</strong> Now, when I develop campaigns, I think like:
+                  <ul>
+                    <li>An agency creative (Is this compelling?)</li>
+                    <li>A broadcaster strategist (Will this reach the right audience?)</li>
+                    <li>A client executive (Will this drive business results?)</li>
+                  </ul>
+                  <strong>The Advantage:</strong> This 360° perspective means I don't just create campaigns – I create campaigns that work.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // Smooth scrolling for navigation
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+  <section id="podcast" class="section">
+    <div class="container">
+      <h2>Marketing Conversations</h2>
+      <div class="podcast-grid">
+        <div class="podcast-card">
+          <div class="podcast-title">The Power of Listening</div>
+          <div class="podcast-duration">3 minutes</div>
+          <div class="podcast-description">
+            Discover how truly listening to a client's concerns transformed a rejected campaign into a 25% sales boost. Sometimes the best strategy starts with asking "why?" instead of defending your creative vision.
+          </div>
+          <button class="listen-button"><span>▶</span>Listen</button>
+        </div>
+        <div class="podcast-card">
+          <div class="podcast-title">When Data Humbles You</div>
+          <div class="podcast-duration">3 minutes</div>
+          <div class="podcast-description">
+            Learn about the time I fell in love with my own brilliant ideas—only to watch them crash with a 2% engagement rate. This painful but priceless lesson taught me why data should always trump ego in marketing decisions.
+          </div>
+          <button class="listen-button"><span>▶</span>Listen</button>
+        </div>
+        <div class="podcast-card">
+          <div class="podcast-title">The Culture Code Crisis</div>
+          <div class="podcast-duration">3 minutes</div>
+          <div class="podcast-description">
+            Hear about my most expensive cultural mistake when I assumed a successful Pakistani campaign would work in Dubai. This costly lesson taught me that every market has its own heartbeat—and your job is to find the rhythm, not impose your own.
+          </div>
+          <button class="listen-button"><span>▶</span>Listen</button>
+        </div>
+        <div class="podcast-card">
+          <div class="podcast-title">The Power of Strategic No</div>
+          <div class="podcast-duration">3 minutes</div>
+          <div class="podcast-description">
+            Sometimes the best thing you can do for a client is save them from their own enthusiasm. Discover how saying "no" to a big-budget, multi-campaign launch actually strengthened a client relationship and exceeded all KPIs.
+          </div>
+          <button class="listen-button"><span>▶</span>Listen</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Add smooth scrolling to nav links
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                scrollToSection(targetId);
-            });
-        });
+  <section id="portfolio" class="section">
+      <div class="container">
+          <h2>Work That Speaks</h2>
+          <div class="portfolio-grid">
+              <div class="portfolio-card">
+                  <div class="portfolio-image">
+                      <a href="https://punjwanirozina.wixsite.com/rozinapunjwani" target="_blank" style="color: white; text-decoration: none;">
+                          View My Graphic Design Portfolio →
+                      </a>
+                  </div>
+                  <div class="portfolio-content">
+                      <div class="portfolio-title">Graphic Design Projects</div>
+                      <div class="portfolio-description">
+                          Explore my creative visual work including brand identity, digital assets, and marketing materials. Click to view my complete design portfolio.
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+  <section id="skills" class="skills-spotlight">
+    <div class="container">
+      <h2>Skills Spotlight</h2>
+      <div class="skills-icons">
+        <div class="skill-item">📊 <div class="skill-label">Strategic Planning</div></div>
+        <div class="skill-item">🚀 <div class="skill-label">Campaign Execution</div></div>
+        <div class="skill-item">🌍 <div class="skill-label">Cross-Cultural Marketing</div></div>
+        <div class="skill-item">🤖 <div class="skill-label">AI Integration</div></div>
+        <div class="skill-item">👥 <div class="skill-label">Team Leadership</div></div>
+        <div class="skill-item">💡 <div class="skill-label">Creative Strategy</div></div>
+      </div>
+    </div>
+  </section>
 
-        // Animate sections on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+  <section id="contact" class="section">
+      <div class="container">
+          <h2>Let's Create Something Amazing Together</h2>
+          <div class="contact-content">
+              <div class="contact-message">
+                  Ready to work with someone who brings global perspective to local challenges? I'm always excited to connect with fellow marketers, potential collaborators, and organizations looking for fresh perspectives.
+              </div>
+              <div class="contact-info">
+                  <div class="contact-item">
+                      <div class="contact-icon">📧</div>
+                      <div class="contact-label">Email</div>
+                      <div class="contact-value">punjwanirozina@gmail.com</div>
+                  </div>
+                  <div class="contact-item">
+                      <div class="contact-icon">💼</div>
+                      <div class="contact-label">LinkedIn</div>
+                      <div class="contact-value">
+                          <a href="https://www.linkedin.com/in/rozinapunjwani/" target="_blank" style="color: #F39C12; text-decoration: none;">Connect with me</a>
+                      </div>
+                  </div>
+                  <div class="contact-item">
+                      <div class="contact-icon">📍</div>
+                      <div class="contact-label">Location</div>
+                      <div class="contact-value">Toronto, Ontario, Canada</div>
+                  </div>
+              </div>
+              <div class="welcome-message" style="margin-top: 3rem;">
+                  <p><strong>Whether you're looking for a marketing strategist, a creative collaborator, or just want to chat about the future of marketing, I'd love to hear from you. Let's create something amazing together!</strong></p>
+                  <br />
+                  <p style="font-style: italic; opacity: 0.9;">
+                      P.S. - If you've made it this far, you're exactly the kind of person I'd love to work with. Attention to detail and curiosity are qualities I value in both colleagues and clients.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </section>
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
+  <footer style="background: #2C3E50; color: white; padding: 2rem 0; text-align: center; margin-top: 4rem;">
+      <div class="container">
+          <p>&copy; 2024 Rozina Punjwani. Crafted with passion and powered by global experience.</p>
+          <p style="margin-top: 1rem; opacity: 0.8;">From Karachi to Toronto, building brands that bridge cultures.</p>
+      </div>
+  </footer>
 
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Add typing effect to hero title
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        window.addEventListener('load', function() {
-            const heroTitle = document.querySelector('.hero h1');
-            const originalText = heroTitle.textContent;
-            setTimeout(() => {
-                typeWriter(heroTitle, originalText, 50);
-            }, 1000);
-        });
-    </script>
+  <script>
+      function scrollToSection(sectionId) {
+          document.getElementById(sectionId).scrollIntoView({
+              behavior: 'smooth'
+          });
+      }
+      document.querySelectorAll('nav a').forEach(link => {
+          link.addEventListener('click', function(e) {
+              e.preventDefault();
+              const targetId = this.getAttribute('href').substring(1);
+              scrollToSection(targetId);
+          });
+      });
+      window.addEventListener('scroll', function() {
+          const navbar = document.getElementById('navbar');
+          if (window.scrollY > 50) {
+              navbar.classList.add('scrolled');
+          } else {
+              navbar.classList.remove('scrolled');
+          }
+      });
+      // Animate sections on scroll
+      const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+      };
+      const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+              }
+          });
+      }, observerOptions);
+      document.querySelectorAll('.section').forEach(section => {
+          observer.observe(section);
+      });
+      document.querySelectorAll('.welcome-message').forEach(message => {
+          observer.observe(message);
+      });
+      // Typing effect for hero title
+      function typeWriter(element, text, speed = 100) {
+          let i = 0;
+          element.innerHTML = '';
+          function type() {
+              if (i < text.length) {
+                  element.innerHTML += text.charAt(i);
+                  i++;
+                  setTimeout(type, speed);
+              }
+          }
+          type();
+      }
+      window.addEventListener('load', function() {
+          const heroTitle = document.querySelector('.hero h1');
+          const originalText = heroTitle.textContent;
+          setTimeout(() => {
+              typeWriter(heroTitle, originalText, 50);
+          }, 1000);
+      });
+  </script>
 </body>
 </html>
