@@ -32,14 +32,38 @@
     .welcome-message { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 60px 40px; border-radius: 20px; font-size: 1.2rem; line-height: 1.8; box-shadow: 0 10px 40px rgba(0,0,0,0.2); position: relative; overflow: hidden; margin: 2rem 0; opacity: 0; transform: translateY(30px); transition: all 0.8s ease;}
     .welcome-message.visible { opacity: 1; transform: translateY(0);}
     .welcome-message::before { content: '"'; position: absolute; top: -10px; left: 20px; font-size: 8rem; color: rgba(255,255,255,0.1); font-family: serif;}
-    .stats { background: white; padding: 80px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.1);}
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;}
-    .stat-item { padding: 2rem; border-radius: 15px; background: linear-gradient(135deg, #f8f9fa, #e9ecef); transition: all 0.3s ease; position: relative; overflow: hidden;}
-    .stat-item::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(243, 156, 18, 0.1), transparent); transition: left 0.5s ease;}
-    .stat-item:hover::before { left: 100%;}
-    .stat-item:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1);}
-    .stat-number { font-size: 3rem; font-weight: bold; color: #2C3E50; margin-bottom: 0.5rem; transition: color 0.3s;}
-    .stat-label { font-size: 1.1rem; color: #7f8c8d; font-weight: 500;}
+    <script>
+function animateCounter(id, endValue, suffix = "", duration = 2000) {
+  const el = document.getElementById(id);
+  let start = 0;
+  const step = Math.ceil(endValue / (duration / 16));
+
+  const update = () => {
+    start += step;
+    if (start < endValue) {
+      el.textContent = start + suffix;
+      requestAnimationFrame(update);
+    } else {
+      el.textContent = endValue + suffix;
+    }
+  };
+
+  update();
+}
+
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter("counter-countries", 3, "");
+      animateCounter("counter-years", 8, "+");
+      animateCounter("counter-campaigns", 15, "+");
+      obs.disconnect();
+    }
+  });
+}, { threshold: 0.5 });
+
+observer.observe(document.querySelector(".stats"));
+</script>
     .section { padding: 80px 0; opacity: 0; transform: translateY(30px); transition: all 0.6s ease;}
     .section.visible { opacity: 1; transform: translateY(0);}
     .section:nth-child(even) { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);}
@@ -124,6 +148,8 @@
       <h1>From Karachi to Toronto: Building Brands That Bridge Cultures</h1>
       <p class="subtitle">Global Marketing Strategist | Storyteller</p>
       <button class="cta-button" onclick="scrollToSection('story')">Discover My Journey</button>
+      </div>
+    </div>
       <div class="welcome-message">
         Hi! I'm Rozina, and I believe great marketing isn't just about reaching people – it's about understanding them. My journey from the bustling streets of Karachi to the corporate towers of Dubai, and now to the multicultural landscape of Toronto, has taught me that the best campaigns are born from genuine human connection.<br><br>
         Whether it's launching Mondelez brands that created media buzz or revamping websites that convert visitors into customers, I've learned that success comes from blending creativity with strategy, and local insights with global vision.<br><br>
