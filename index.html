@@ -131,20 +131,83 @@
     </div>
   </section>
 
-  <section class="stats">
-      <div class="container">
-          <div class="stats-grid">
-              <div class="stat-item">
-                  <div class="stat-number" id="counter-countries">0</div>
-                  <div class="stat-label">Countries</div>
-              </div>
-              <div class="stat-item">
-                  <div class="stat-number" id="counter-years">0</div>
-                  <div class="stat-label">Years - Marketing Experience</div>
-              </div>
-              <div class="stat-item">
-                  <div class="stat-number" id="counter-campaigns">0</div>
-                  <div class="stat-label">Campaigns - Across Traditional & Digital</div>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Stats Example</title>
+  <style>
+    .stats-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 40px 0;
+    }
+    .stat-block {
+      text-align: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .counter {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #764ba2;
+      margin-bottom: 0.3em;
+      min-width: 2.2em;
+      display: block;
+      letter-spacing: 2px;
+    }
+    .stat-label {
+      font-size: 1.1rem;
+      color: #3e3d4d;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="stats-container">
+    <div class="stat-block">
+      <span class="counter" data-target="3" data-suffix="">0</span>
+      <div class="stat-label">Countries</div>
+    </div>
+    <div class="stat-block">
+      <span class="counter" data-target="8" data-suffix="+">0</span>
+      <div class="stat-label">Years - Marketing Experience</div>
+    </div>
+    <div class="stat-block">
+      <span class="counter" data-target="15" data-suffix="+">0</span>
+      <div class="stat-label">Campaigns - Across Traditional &amp; Digital</div>
+    </div>
+  </div>
+
+  <script>
+    // Counter Animation Function
+    function animateCounter(element, start = 0, end, duration = 2000, suffix = '') {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        element.innerText = value + suffix;
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        } else {
+          element.innerText = end + suffix; // Ensure ending value
+        }
+      };
+      window.requestAnimationFrame(step);
+    }
+
+    // Animate all counters on DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.counter').forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'), 10);
+        const suffix = counter.getAttribute('data-suffix') || '';
+        animateCounter(counter, 0, target, 1600, suffix);
+      });
+    });
+  </script>
+</body>
+</html>
               </div>
           </div>
       </div>
