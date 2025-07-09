@@ -33,6 +33,72 @@
     .welcome-message.visible { opacity: 1; transform: translateY(0);}
     .welcome-message::before { content: '"'; position: absolute; top: -10px; left: 20px; font-size: 8rem; color: rgba(255,255,255,0.1); font-family: serif;}
     <script>
+<!-- ✅ STATS SECTION START -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number counter" id="counter-countries" data-target="3" data-suffix="">0</div>
+        <div class="stat-label">Countries</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number counter" id="counter-years" data-target="8" data-suffix="+">0</div>
+        <div class="stat-label">Years – Marketing Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number counter" id="counter-campaigns" data-target="15" data-suffix="+">0</div>
+        <div class="stat-label">Campaigns – Across Traditional & Digital</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ✅ STATS SECTION END -->
+
+<!-- 🎨 STATS CSS (Add inside <style>) -->
+<style>
+.stats {
+  background: white;
+  padding: 80px 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 2rem;
+  border-radius: 16px;
+  background: #f8f9fa;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: navy;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+</style>
+
+<!-- 🚀 STATS COUNTER SCRIPT (Place before </body>) -->
+<script>
 function animateCounter(id, endValue, suffix = "", duration = 2000) {
   const el = document.getElementById(id);
   let start = 0;
