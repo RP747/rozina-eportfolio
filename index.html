@@ -41,13 +41,13 @@ nav a:hover::after { width: 80%;}
 
 .hero-content { max-width: 800px; position: relative; z-index: 2; }
 
-.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; background: linear-gradient(135deg, #F39C12, #E74C3C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: slideInDown 1s ease-out;}
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; color: #D4AF37; animation: slideInDown 1s ease-out;}
 
 .hero .subtitle { font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9; animation: slideInUp 1s ease-out 0.3s both;}
 
-.hero .cta-button { background: linear-gradient(135deg, #F39C12, #E67E22); color: white; padding: 15px 40px; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); animation: slideInUp 1s ease-out 0.6s both;}
+.hero .cta-button { background: #D4AF37; color: white; padding: 15px 40px; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); animation: slideInUp 1s ease-out 0.6s both;}
 
-.hero .cta-button:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(243, 156, 18, 0.6);}
+.hero .cta-button:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6); background: #D4AF37;}
 
 .welcome-message { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 60px 40px; border-radius: 20px; font-size: 1.2rem; line-height: 1.8; box-shadow: 0 10px 40px rgba(0,0,0,0.2); position: relative; overflow: hidden; margin: 2rem 0; opacity: 0; transform: translateY(30px); transition: all 0.8s ease;}
 
@@ -117,7 +117,7 @@ nav a:hover::after { width: 80%;}
 
 .section:nth-child(odd) { background: white;}
 
-.section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #2C3E50; position: relative;}
+.section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #D4AF37; position: relative; padding: 20px; border-radius: 10px;}
 
 .section h2::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: linear-gradient(135deg, #F39C12, #E74C3C); border-radius: 2px;}
 
@@ -135,11 +135,11 @@ nav a:hover::after { width: 80%;}
 
 .blog-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column;}
 
-.blog-card-header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.5rem; font-weight: 600; font-size: 1.1rem;}
+.blog-card-header { background: #8391A1; color: white; padding: 1.5rem; font-weight: 600; font-size: 1.1rem;}
 
 .blog-card-content { padding: 1.5rem; color: #555; line-height: 1.6; flex: 1;}
 
-.read-more { color: #F39C12; font-weight: 600; text-decoration: none; transition: all 0.3s ease;}
+.read-more { color: #D4AF37; font-weight: 600; text-decoration: none; transition: all 0.3s ease;}
 
 .read-more:hover { color: #E67E22; transform: translateX(5px);}
 
@@ -149,13 +149,13 @@ nav a:hover::after { width: 80%;}
 
 .podcast-title { font-size: 1.3rem; font-weight: 600; color: #2C3E50; margin-bottom: 0.5rem;}
 
-.podcast-duration { color: #F39C12; font-weight: 500; margin-bottom: 1rem;}
+.podcast-duration { color: #D4AF37; font-weight: 500; margin-bottom: 1rem;}
 
 .podcast-description { color: #555; line-height: 1.6; margin-bottom: 1.5rem;}
 
-.listen-button { background: linear-gradient(135deg, #F39C12, #E67E22); color: white; border: none; padding: 10px 32px; border-radius: 25px; cursor: pointer; font-weight: 600; font-size: 1.1rem; letter-spacing: 1px; transition: all 0.3s ease; align-self: flex-start; margin-top: auto; display: flex; align-items: center; gap: 0.5em;}
+.listen-button { background: #D4AF37; color: white; border: none; padding: 10px 32px; border-radius: 25px; cursor: pointer; font-weight: 600; font-size: 1.1rem; letter-spacing: 1px; transition: all 0.3s ease; align-self: flex-start; margin-top: auto; display: flex; align-items: center; gap: 0.5em;}
 
-.listen-button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4); background: linear-gradient(135deg, #E67E22, #F39C12);}
+.listen-button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);}
 
 .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 2rem;}
 
@@ -183,7 +183,7 @@ nav a:hover::after { width: 80%;}
 
 .contact-content { text-align: center; max-width: 600px; margin: 0 auto;}
 
-.contact-message { font-size: 1.2rem; color: #2C3E50; margin-bottom: 2rem; line-height: 1.6;}
+.contact-message { font-size: 1.2rem; color: white; margin-bottom: 2rem; line-height: 1.6;}
 
 .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0;}
 
@@ -197,6 +197,10 @@ nav a:hover::after { width: 80%;}
 
 .contact-value { color: #F39C12; font-weight: 500;}
 
+#blog { background-color: #344F7C; }
+#portfolio { background-color: #344F7C; }
+#contact { background-color: #344F7C; }
+
 @keyframes slideInDown { from { opacity: 0; transform: translateY(-50px);} to { opacity: 1; transform: translateY(0);} }
 
 @keyframes slideInUp { from { opacity: 0; transform: translateY(50px);} to { opacity: 1; transform: translateY(0);} }
@@ -208,6 +212,7 @@ nav a:hover::after { width: 80%;}
     .hero .subtitle { font-size: 1.2rem; }
     nav ul { flex-direction: column; gap: 1rem;}
     .blog-grid, .podcast-grid, .portfolio-grid, .story-sections, .skills-icons { grid-template-columns: 1fr;}
+    .section h2 { font-size: 2rem; padding: 15px;}
 }
 
 @media (max-width: 480px) {
@@ -216,6 +221,7 @@ nav a:hover::after { width: 80%;}
     .skills-spotlight { padding: 40px 0;}
     .skills-icons { flex-direction: column; gap: 1rem;}
     .skill-item { min-width: 80px; }
+    .section h2 { font-size: 1.8rem; padding: 10px;}
 }
 </style>
 </head>
@@ -330,7 +336,7 @@ nav a:hover::after { width: 80%;}
                 <div class="blog-card-content">
                     <p><strong>Preview:</strong> What happens when months of planning, creative brilliance, and strategic execution come together? The Mondelez launch taught me that marketing isn't about pushing products -- it's about creating moments that matter...</p>
                     <details>
-                        <summary style="margin:1rem 0;cursor:pointer;color:#F39C12;font-weight:bold;">Read Full Story</summary>
+                        <summary style="margin:1rem 0;cursor:pointer;color:#D4AF37;font-weight:bold;">Read Full Story</summary>
                         <div>
                             <p>
                                 <strong>Picture this:</strong> It's 2014, and we're about to launch Mondelez brands in a market that's already saturated with confectionery options. The pressure is intense, the stakes are high, and everyone's watching.
@@ -354,7 +360,7 @@ nav a:hover::after { width: 80%;}
                 <div class="blog-card-content">
                     <p><strong>Preview:</strong> Working across three continents taught me that while cultures differ, human emotions are universal. Here's how understanding Dubai's diverse market prepared me for Toronto's multicultural landscape...</p>
                     <details>
-                        <summary style="margin:1rem 0;cursor:pointer;color:#F39C12;font-weight:bold;">Read Full Story</summary>
+                        <summary style="margin:1rem 0;cursor:pointer;color:#D4AF37;font-weight:bold;">Read Full Story</summary>
                         <div>
                             <p>
                                 When I first arrived in Dubai, I thought I understood diversity. I was wrong. Dubai didn't just teach me about different cultures -- it taught me about cultural intelligence in marketing.
@@ -375,7 +381,7 @@ nav a:hover::after { width: 80%;}
                 <div class="blog-card-content">
                     <p><strong>Preview:</strong> Getting my AI certification wasn't just about learning new tools -- it was about preparing for a future where human creativity and artificial intelligence work together to create marketing magic...</p>
                     <details>
-                        <summary style="margin:1rem 0;cursor:pointer;color:#F39C12;font-weight:bold;">Read Full Story</summary>
+                        <summary style="margin:1rem 0;cursor:pointer;color:#D4AF37;font-weight:bold;">Read Full Story</summary>
                         <div>
                             <p>
                                 Everyone's talking about AI replacing marketers. I see it differently. AI isn't replacing human creativity -- it's amplifying it.
@@ -401,7 +407,7 @@ nav a:hover::after { width: 80%;}
                 <div class="blog-card-content">
                     <p><strong>Preview:</strong> Most marketers see the industry from one angle. I've been fortunate to experience it from three: agency creativity, broadcaster reach, and client objectives. Here's what each perspective taught me...</p>
                     <details>
-                        <summary style="margin:1rem 0;cursor:pointer;color:#F39C12;font-weight:bold;">Read Full Story</summary>
+                        <summary style="margin:1rem 0;cursor:pointer;color:#D4AF37;font-weight:bold;">Read Full Story</summary>
                         <div>
                             <p>
                                 My career path wasn't planned -- it was discovered. Each role taught me something different about marketing, and together, they created a perspective that's uniquely mine.
@@ -432,35 +438,35 @@ nav a:hover::after { width: 80%;}
         <div class="podcast-grid">
             <div class="podcast-card">
                 <div class="podcast-title">The Power of Listening</div>
-                <div class="podcast-duration">3 minutes</div>
+                <div class="podcast-duration">2 minutes</div>
                 <div class="podcast-description">
                     Discover how truly listening to a client's concerns transformed a rejected campaign into a 25% sales boost. Sometimes the best strategy starts with asking "why?" instead of defending your creative vision.
                 </div>
-                <button class="listen-button"><span>▶</span>Listen</button>
+                <button class="listen-button" onclick="window.open('https://open.spotify.com/episode/6ctPTdigT9Ipboz8AOgFxu?si=F4gq1CotRAKpxsRUanm-Jg', '_blank')"><span>▶</span>Listen</button>
             </div>
             <div class="podcast-card">
                 <div class="podcast-title">When Data Humbles You</div>
-                <div class="podcast-duration">3 minutes</div>
+                <div class="podcast-duration">2 minutes</div>
                 <div class="podcast-description">
                     Learn about the time I fell in love with my own brilliant ideas---only to watch them crash with a 2% engagement rate. This painful but priceless lesson taught me why data should always trump ego in marketing decisions.
                 </div>
-                <button class="listen-button"><span>▶</span>Listen</button>
+                <button class="listen-button" onclick="window.open('https://open.spotify.com/episode/6Mg0Od3fp3jRhT3D6l0xAs?si=lKkBvAetS5aAS94N_A5uZg', '_blank')"><span>▶</span>Listen</button>
             </div>
             <div class="podcast-card">
                 <div class="podcast-title">The Culture Code Crisis</div>
-                <div class="podcast-duration">3 minutes</div>
+                <div class="podcast-duration">2 minutes</div>
                 <div class="podcast-description">
                     Hear about my most expensive cultural mistake when I assumed a successful Pakistani campaign would work in Dubai. This costly lesson taught me that every market has its own heartbeat---and your job is to find the rhythm, not impose your own.
                 </div>
-                <button class="listen-button"><span>▶</span>Listen</button>
+                <button class="listen-button" onclick="window.open('https://open.spotify.com/episode/67e8AZafv94h3qYmIQPTQ3?si=k7sMan-kRMi31nFpc3Q6SQ', '_blank')"><span>▶</span>Listen</button>
             </div>
             <div class="podcast-card">
                 <div class="podcast-title">The Power of Strategic No</div>
-                <div class="podcast-duration">3 minutes</div>
+                <div class="podcast-duration">2 minutes</div>
                 <div class="podcast-description">
                     Sometimes the best thing you can do for a client is save them from their own enthusiasm. Discover how saying "no" to a big-budget, multi-campaign launch actually strengthened a client relationship and exceeded all KPIs.
                 </div>
-                <button class="listen-button"><span>▶</span>Listen</button>
+                <button class="listen-button" onclick="window.open('https://open.spotify.com/episode/5kh8yYKjYkpLHKrzbY3wLT?si=_3Qvi-qMQOuzGE-Gy2_vEg', '_blank')"><span>▶</span>Listen</button>
             </div>
         </div>
     </div>
