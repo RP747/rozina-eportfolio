@@ -1,657 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rozina Punjwani - Marketing Strategist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rozina Punjwani — Creative Director & Graphic Designer</title>
+  <meta name="description" content="Graphic design portfolio of Rozina Punjwani: branding, campaigns, posters, UX/UI website work, and scalable Canva templates for franchises."/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-<!-- Favicon links -->
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
-
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-nav { background: rgba(44, 62, 80, 0.95); backdrop-filter: blur(10px); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; transition: all 0.3s ease; }
-
-nav.scrolled { background: rgba(44, 62, 80, 0.98); box-shadow: 0 2px 20px rgba(0,0,0,0.1);}
-
-nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem;}
-
-nav a { color: white; text-decoration: none; font-weight: 500; transition: all 0.3s ease; position: relative; padding: 0.5rem 1rem; border-radius: 25px;}
-
-nav a:hover { background: rgba(243, 156, 18, 0.2); transform: translateY(-2px);}
-
-nav a::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background: #F39C12; transition: all 0.3s ease; transform: translateX(-50%);}
-
-nav a:hover::after { width: 80%;}
-
-.hero { background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(52, 73, 94, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>'); min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 120px 20px 80px; position: relative; overflow: hidden;}
-
-.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat; animation: float 20s infinite linear; opacity: 0.3;}
-
-@keyframes float { 0% { transform: translateY(0px); } 100% { transform: translateY(-100px); } }
-
-.hero-content { max-width: 800px; position: relative; z-index: 2; }
-
-.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; color: #D4AF37; animation: slideInDown 1s ease-out;}
-
-.hero .subtitle { font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9; animation: slideInUp 1s ease-out 0.3s both;}
-
-.hero .cta-button { background: #D4AF37; color: white; padding: 15px 40px; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4); animation: slideInUp 1s ease-out 0.6s both;}
-
-.hero .cta-button:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6); background: #D4AF37;}
-
-.welcome-message { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 60px 40px; border-radius: 20px; font-size: 1.2rem; line-height: 1.8; box-shadow: 0 10px 40px rgba(0,0,0,0.2); position: relative; overflow: hidden; margin: 2rem 0; opacity: 0; transform: translateY(30px); transition: all 0.8s ease;}
-
-.welcome-message.visible { opacity: 1; transform: translateY(0);}
-
-.welcome-message::before { content: '"'; position: absolute; top: -10px; left: 20px; font-size: 8rem; color: rgba(255,255,255,0.1); font-family: serif;}
-
-/* Stats Section Styles */
-.stats-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 40px auto;
-    flex-wrap: wrap;
-}
-
-.stat-block {
-    background: white;
-    border-radius: 15px;
-    padding: 30px 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: center;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    min-width: 200px;
-    flex: 1;
-}
-
-.counter {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #764ba2;
-    margin-bottom: 0.3em;
-    min-width: 2.2em;
-    display: block;
-    letter-spacing: 2px;
-}
-
-.stat-label {
-    font-size: 1.1rem;
-    color: #3e3d4d;
-    letter-spacing: 0.5px;
-}
-
-@media (max-width: 768px) {
-    .stat-block {
-        min-width: 150px;
-        padding: 20px 15px;
+  <style>
+    /* Base + Theme */
+    :root{
+      --bg1:#0f172a;
+      --bg2:#111827;
+      --text:#0b0f1a;
+      --white:#ffffff;
+      --muted:#6b7280;
+      --brand:#D4AF37;   /* gold accent */
+      --accent:#7c3aed;  /* purple accent */
+      --card:#ffffff;
+      --link:#2563eb;
     }
-}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif; line-height:1.6; color:#1f2937; background:linear-gradient(135deg, #eae9f6 0%, #f7f7fb 100%)}
 
-@media (max-width: 480px) {
-    .stats-container {
-        flex-direction: column;
-    }
-    .stat-block {
-        width: 100%;
-        max-width: 250px;
-        margin: 0 auto 15px;
-    }
-}
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
 
-.section { padding: 80px 0; opacity: 0; transform: translateY(30px); transition: all 0.6s ease;}
+    /* Nav */
+    nav{position:fixed; top:0; left:0; right:0; z-index:10; background:#111827cc; backdrop-filter:saturate(140%) blur(6px); border-bottom:1px solid #1f2937; }
+    nav .wrap{display:flex; align-items:center; justify-content:space-between; padding:12px 20px}
+    nav .brand{color:var(--white); font-weight:700; letter-spacing:.3px}
+    nav ul{display:flex; gap:20px; list-style:none; margin:0; padding:0}
+    nav a{color:#e5e7eb; text-decoration:none; font-weight:600; padding:8px 12px; border-radius:8px}
+    nav a:hover{background:#1f2937; color:#fff}
 
-.section.visible { opacity: 1; transform: translateY(0);}
+    /* Hero */
+    .hero{padding:140px 0 60px; background:radial-gradient(1200px 500px at 20% -50%, #a78bfa1c, transparent 60%), linear-gradient(180deg,#0f172a 0%, #111827 100%); color:#e5e7eb}
+    .hero h1{font-size:2.4rem; margin:0 0 10px; color:#fff}
+    .hero p{color:#cbd5e1; max-width:720px}
+    .hero .cta{margin-top:20px; display:flex; gap:12px; flex-wrap:wrap}
+    .btn{display:inline-block; background:var(--brand); color:#111827; padding:10px 16px; border-radius:10px; font-weight:700; text-decoration:none}
+    .btn.secondary{background:#1f2937; color:#fff; border:1px solid #374151}
 
-.section:nth-child(even) { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);}
+    /* Sections */
+    section{padding:70px 0}
+    section h2{font-size:1.8rem; margin:0 0 24px; color:#111827}
+    .sub{color:#6b7280; margin-top:-12px}
 
-.section:nth-child(odd) { background: white;}
+    /* Portfolio grid */
+    .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px}
+    .card{background:var(--card); border:1px solid #e5e7eb; border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.06); display:flex; flex-direction:column}
+    .thumb{position:relative; height:180px; background:#f3f4f6; display:flex; align-items:center; justify-content:center}
+    .thumb img{width:100%; height:100%; object-fit:cover}
+    .badge{position:absolute; top:12px; left:12px; background:#111827; color:#fff; font-size:.75rem; padding:6px 10px; border-radius:999px}
+    .card-body{padding:14px 16px; display:flex; flex-direction:column; gap:8px}
+    .title{font-weight:700; color:#111827}
+    .desc{color:#6b7280; font-size:.95rem}
+    .meta{font-size:.85rem; color:#4b5563}
+    .actions{margin-top:10px; display:flex; gap:10px; flex-wrap:wrap}
+    .link{color:var(--link); font-weight:700; text-decoration:none}
 
-.section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #D4AF37; position: relative; padding: 20px; border-radius: 10px;}
+    /* Case study blocks */
+    .case{display:grid; grid-template-columns:1.2fr .8fr; gap:24px}
+    @media (max-width:860px){ .case{grid-template-columns:1fr} }
+    .case .visual{background:#f3f4f6; border-radius:14px; overflow:hidden}
+    .case .visual img{width:100%; height:auto; display:block}
+    .case .copy{display:flex; flex-direction:column; gap:10px}
+    .copy .label{color:#6b7280; font-weight:700; text-transform:uppercase; letter-spacing:.08em; font-size:.75rem}
 
-.section h2::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: linear-gradient(135deg, #F39C12, #E74C3C); border-radius: 2px;}
+    /* Footer */
+    footer{background:#0f172a; color:#cbd5e1; padding:40px 0; text-align:center}
+    footer a{color:#fff; text-decoration:none; font-weight:700}
 
-.story-sections { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;}
-
-.story-card { background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column;}
-
-.story-card img { width: 100%; height: 180px; object-fit: cover; }
-
-.story-card-content { padding: 1.5rem; flex: 1; display: flex; flex-direction: column;}
-
-.story-title { font-size: 1.2rem; font-weight: bold; color: #764ba2; margin-bottom: 1rem;}
-
-.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;}
-
-.blog-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer; display: flex; flex-direction: column;}
-
-.blog-card-header { background: #8391A1; color: white; padding: 1.5rem; font-weight: 600; font-size: 1.1rem;}
-
-.blog-card-content { padding: 1.5rem; color: #555; line-height: 1.6; flex: 1;}
-
-.read-more { color: #D4AF37; font-weight: 600; text-decoration: none; transition: all 0.3s ease;}
-
-.read-more:hover { color: #E67E22; transform: translateX(5px);}
-
-.podcast-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;}
-
-.podcast-card { background: white; border-radius: 15px; padding: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: all 0.3s ease; position: relative; display: flex; flex-direction: column; min-height: 230px; justify-content: flex-start;}
-
-.podcast-title { font-size: 1.3rem; font-weight: 600; color: #2C3E50; margin-bottom: 0.5rem;}
-
-.podcast-duration { color: #D4AF37; font-weight: 500; margin-bottom: 1rem;}
-
-.podcast-description { color: #555; line-height: 1.6; margin-bottom: 1.5rem;}
-
-.listen-button { background: #D4AF37; color: white; border: none; padding: 10px 32px; border-radius: 25px; cursor: pointer; font-weight: 600; font-size: 1.1rem; letter-spacing: 1px; transition: all 0.3s ease; align-self: flex-start; margin-top: auto; display: flex; align-items: center; gap: 0.5em;}
-
-.listen-button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);}
-
-.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 2rem;}
-
-.portfolio-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: all 0.3s ease;}
-
-.portfolio-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.2);}
-
-.portfolio-image { height: 200px; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: 600;}
-
-.portfolio-content { padding: 1.5rem;}
-
-.portfolio-title { font-size: 1.3rem; font-weight: 600; color: #2C3E50; margin-bottom: 1rem;}
-
-.portfolio-description { color: #555; line-height: 1.6;}
-
-.skills-spotlight { background: linear-gradient(135deg, #f8fafc 80%, #e9ecef 100%); padding: 64px 0; text-align: center; border-radius: 16px; margin-top: 2rem; margin-bottom: 2rem; box-shadow: 0 5px 24px rgba(102,126,234,0.08);}
-
-.skills-spotlight h2 { font-size: 2rem; margin-bottom: 2rem; color: #764ba2;}
-
-.skills-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; font-size: 2.2rem; margin-top: 1.5rem;}
-
-.skill-item { display: flex; flex-direction: column; align-items: center; font-size: 2.2rem; color: #2C3E50; min-width: 120px;}
-
-.skill-label { margin-top: 0.5rem; font-size: 1.05rem; color: #555; font-weight: 600; letter-spacing: 0.01em;}
-
-.contact-content { text-align: center; max-width: 600px; margin: 0 auto;}
-
-.contact-message { font-size: 1.2rem; color: white; margin-bottom: 2rem; line-height: 1.6;}
-
-.contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0;}
-
-.contact-item { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s ease;}
-
-.contact-item:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.15);}
-
-.contact-icon { font-size: 2rem; margin-bottom: 1rem;}
-
-.contact-label { font-weight: 600; color: #2C3E50; margin-bottom: 0.5rem;}
-
-.contact-value { color: #F39C12; font-weight: 500;}
-
-#blog { background-color: #344F7C; }
-#portfolio { background-color: #344F7C; }
-#contact { background-color: #344F7C; }
-
-@keyframes slideInDown { from { opacity: 0; transform: translateY(-50px);} to { opacity: 1; transform: translateY(0);} }
-
-@keyframes slideInUp { from { opacity: 0; transform: translateY(50px);} to { opacity: 1; transform: translateY(0);} }
-
-@media (max-width: 900px) { .skills-icons { gap: 1.5rem; } }
-
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .hero .subtitle { font-size: 1.2rem; }
-    nav ul { flex-direction: column; gap: 1rem;}
-    .blog-grid, .podcast-grid, .portfolio-grid, .story-sections, .skills-icons { grid-template-columns: 1fr;}
-    .section h2 { font-size: 2rem; padding: 15px;}
-}
-
-@media (max-width: 480px) {
-    .hero { padding: 100px 10px 60px;}
-    .section { padding: 60px 0;}
-    .skills-spotlight { padding: 40px 0;}
-    .skills-icons { flex-direction: column; gap: 1rem;}
-    .skill-item { min-width: 80px; }
-    .section h2 { font-size: 1.8rem; padding: 10px;}
-}
-</style>
+    /* Accessibility helpers */
+    a:focus{outline:3px solid #a78bfa; outline-offset:2px}
+    img{alt:""}
+  </style>
 </head>
-
 <body>
-<nav id="navbar">
+  <!-- NAV -->
+  <nav aria-label="Primary">
+    <div class="wrap container">
+      <div class="brand">Rozina Punjwani</div>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#web">Website design</a></li>
+        <li><a href="#templates">Templates</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home" role="banner">
     <div class="container">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#story">My Story</a></li>
-            <li><a href="#blog">Blog Posts</a></li>
-            <li><a href="#podcast">Podcast Episodes</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Connect</a></li>
-        </ul>
+      <h1>Creative Director & Graphic Designer building brand-consistent, scalable systems</h1>
+      <p>I design branding, campaigns, and templates that non‑design teams can adapt confidently. From social and email to billboards and websites, my work blends aesthetics with performance and accessibility.</p>
+      <div class="cta">
+        <a class="btn" href="#portfolio">View featured projects</a>
+        <a class="btn secondary" href="Punjwani-Rozina-Resume.pdf" target="_blank" rel="noopener">Download resume</a>
+      </div>
     </div>
-</nav>
+  </header>
 
-<section id="home" class="hero">
-    <div class="hero-content">
-        <h1>From Karachi to Toronto: Building Brands That Bridge Cultures</h1>
-        <p class="subtitle">Global Marketing Strategist | Storyteller</p>
-        <button class="cta-button" onclick="scrollToSection('story')">Discover My Journey</button>
-        
-        <div class="welcome-message">
-            Hi! I'm Rozina, and I believe great marketing isn't just about reaching people -- it's about understanding them. My journey from the bustling streets of Karachi to the corporate towers of Dubai, and now to the multicultural landscape of Toronto, has taught me that the best campaigns are born from genuine human connection.<br><br>
-
-            Whether it's launching Mondelez brands that created media buzz or revamping websites that convert visitors into customers, I've learned that success comes from blending creativity with strategy, and local insights with global vision.<br><br>
-
-            <strong>Ready to see how I turn marketing challenges into brand victories?</strong>
-        </div>
-        
-        <!-- Stats Section -->
-        <div class="stats-container">
-            <div class="stat-block">
-                <span class="counter" data-target="3" data-suffix="">0</span>
-                <div class="stat-label">Countries</div>
-            </div>
-            <div class="stat-block">
-                <span class="counter" data-target="8" data-suffix="+">0</span>
-                <div class="stat-label">Years - Marketing Experience</div>
-            </div>
-            <div class="stat-block">
-                <span class="counter" data-target="15" data-suffix="+">0</span>
-                <div class="stat-label">Campaigns - Across Traditional &amp; Digital</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- The Journey That Shaped My Vision -->
-<section id="story" class="section">
+  <!-- PORTFOLIO: GRAPHIC DESIGN -->
+  <section id="portfolio" aria-labelledby="portfolio-title">
     <div class="container">
-        <h2>The Journey That Shaped My Vision</h2>
-        <div class="story-sections">
-            <div class="story-card">
-                <img src="https://images.unsplash.com/photo-1617373743747-3bb331fd4e8d?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Karachi cityscape">
-                <div class="story-card-content">
-                    <div class="story-title">The Karachi Beginning</div>
-                    <p>
-                        My marketing story began in Karachi, where I learned that creativity thrives under constraints. Working with local agencies and broadcasters like HUM Network, I discovered that the most impactful campaigns come from understanding your audience's deepest needs. At SZABIST, I wasn't just studying marketing -- I was living it. Winning debate competitions taught me the power of persuasive communication, while my early internships and agency work showed me how big ideas start with small insights and rigorous execution.
-                    </p>
-                </div>
-            </div>
-            <div class="story-card">
-                <img src="https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dubai skyline">
-                <div class="story-card-content">
-                    <div class="story-title">Dubai Dreams and Global Brands</div>
-                    <p>
-                        Dubai transformed my perspective from local to global. At Starcom and ADCOMM, I wasn't just planning media -- I was orchestrating brand symphonies across cultures. The Mondelez launch in 2014 (which I supported while at Starcom in Karachi) taught me that successful campaigns require more than great creative; they need flawless execution and continuous monitoring. Working in the MENA region showed me how global brands must speak local languages, not just linguistically, but culturally.
-                    </p>
-                </div>
-            </div>
-            <div class="story-card">
-                <img src="https://images.unsplash.com/photo-1517090504586-fde19ea6066f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Toronto CN Tower">
-                <div class="story-card-content">
-                    <div class="story-title">Toronto: Where Global Meets Local</div>
-                    <p>
-                        Toronto represents the synthesis of everything I've learned. Here, I'm not just applying international experience -- I'm creating something new. My AI certification from Microsoft and LinkedIn isn't just about keeping up with trends; it's about preparing for the future of marketing. At A1 Dynamics, I'm combining my global perspective with local insights, successfully revamping websites like A1Dynamics.com and Sikyuen.mu while creating campaigns that resonate across cultures and drive real business results.
-                    </p>
-                </div>
-            </div>
-        </div>
+      <h2 id="portfolio-title">Featured graphic design</h2>
+      <p class="sub">Branding, campaigns, posters, and social content. Click through for details.</p>
 
-        <!-- Karachi Section Images Gallery -->
-        <div class="container" style="margin-top: 3rem; text-align: center;">
-            <h3 style="color:#764ba2; margin-bottom:1.5rem;">Moments from Pakistan: My Beginnings</h3>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-                <div>
-                    <img src="image1.jpeg" alt="Graduation" style="width:270px; border-radius:12px; box-shadow: 0 4px 16px rgba(44,62,80,0.10)">
-                    <div style="margin-top:0.5rem;font-weight:600;">Graduation</div>
-                </div>
-                <div>
-                    <img src="image2.jpeg" alt="Advertising Award" style="width:270px; border-radius:12px; box-shadow: 0 4px 16px rgba(44,62,80,0.10)">
-                    <div style="margin-top:0.5rem;font-weight:600;">Advertising Award</div>
-                </div>
-                <div>
-                    <img src="image3.jpeg" alt="Early Worklife" style="width:270px; border-radius:12px; box-shadow: 0 4px 16px rgba(44,62,80,0.10)">
-                    <div style="margin-top:0.5rem;font-weight:600;">Early Worklife</div>
-                </div>
+      <div class="grid">
+        <!-- Red Cross -->
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Campaign</span>
+            <img src="red cross logo.png" alt="Red Cross awareness campaign poster"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Red Cross — Public awareness visuals</div>
+            <div class="desc">Designed clear, accessible assets focused on legibility and quick comprehension for heat-wave safety.</div>
+            <div class="meta">Role: Art direction, layout, accessibility | Tools: Adobe Suite</div>
+            <div class="actions">
+              <a class="link" href="https://punjwanirozina.wixsite.com/rozinapunjwani/portfolio" target="_blank" rel="noopener">See full set →</a>
             </div>
-        </div>
+          </div>
+        </article>
+
+        <!-- Boutique -->
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Branding</span>
+            <img src="bouti.png" alt="Boutique logo and identity system"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Boutique — Logo & identity</div>
+            <div class="desc">Minimal logo, color system, and templates for cohesive storefront and social presence.</div>
+            <div class="meta">Role: Identity | Tools: Illustrator, Canva handoff</div>
+            <div class="actions">
+              <a class="link" href="https://punjwanirozina.wixsite.com/rozinapunjwani/portfolio" target="_blank" rel="noopener">Brand guide →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Florist -->
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Branding</span>
+            <img src="bou.png" alt="Florist brand visuals"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Florist — Visual identity</div>
+            <div class="desc">Delicate typography and floral motif adapted across packaging and Instagram templates.</div>
+            <div class="meta">Role: Identity | Tools: Illustrator, Canva</div>
+            <div class="actions">
+              <a class="link" href="https://punjwanirozina.wixsite.com/rozinapunjwani/portfolio" target="_blank" rel="noopener">See templates →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Social cause clothing -->
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Campaign</span>
+            <img src="social.png" alt="Social cause clothing brand campaign visuals"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Social cause clothing — Campaign set</div>
+            <div class="desc">Cause-forward narrative with adaptable social tiles and print flyers.</div>
+            <div class="meta">Role: Creative direction | Tools: Photoshop, Canva handoff</div>
+            <div class="actions">
+              <a class="link" href="https://punjwanirozina.wixsite.com/rozinapunjwani/portfolio" target="_blank" rel="noopener">Campaign overview →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Suicide awareness -->
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Campaign</span>
+            <img src="rope.png" alt="Suicide awareness campaign poster"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Suicide awareness — Sensitive design</div>
+            <div class="desc">Empathetic visual language built for clarity, care, and resource visibility.</div>
+            <div class="meta">Role: Art direction, messaging alignment</div>
+            <div class="actions">
+              <a class="link" href="https://punjwanirozina.wixsite.com/rozinapunjwani/portfolio" target="_blank" rel="noopener">Poster set →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event posters -->
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Events</span>
+            <img src="music.png" alt="Musical Night event poster"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Event posters — Music & Fashion</div>
+            <div class="desc">High-impact poster compositions for “Musical Night” and “Fashion Nightwear”.</div>
+            <div class="meta">Role: Visual design | Tools: Photoshop</div>
+            <div class="actions">
+              <a class="link" href="fashion.png" target="_blank" rel="noopener">View Fashion Nightwear →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sports shop -->
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Retail</span>
+            <img src="ball.png" alt="Sports shop promotional poster"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Sports shop — Retail promos</div>
+            <div class="desc">Bold typographic system and product highlight frames for in-store & social.</div>
+            <div class="meta">Role: Layout, production</div>
+            <div class="actions">
+              <a class="link" href="https://punjwanirozina.wixsite.com/rozinapunjwani/portfolio" target="_blank" rel="noopener">See set →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Awareness days -->
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Awareness</span>
+            <img src="diab.png" alt="World Diabetes Day poster"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Awareness days — Diabetes & Book Day</div>
+            <div class="desc">Educational posters optimized for readability and quick shareability.</div>
+            <div class="meta">Role: Content design | Tools: Illustrator</div>
+            <div class="actions">
+              <a class="link" href="book.png" target="_blank" rel="noopener">View Book Day →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Travel & community -->
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Community</span>
+            <img src="turkey.png" alt="Turkey trip travel poster"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Community & culture — Turkey Trip & Baithak</div>
+            <div class="desc">Event visuals celebrating culture and connection.</div>
+            <div class="meta">Role: Visual design</div>
+            <div class="actions">
+              <a class="link" href="chat.png" target="_blank" rel="noopener">View Baithak →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Makeup artist -->
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Commercial</span>
+            <img src="makeup.png" alt="Makeup artist branding"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Makeup artist — Brand visuals</div>
+            <div class="desc">Premium look & feel tailored for portfolio and Instagram presence.</div>
+            <div class="meta">Role: Identity & social templates</div>
+            <div class="actions">
+              <a class="link" href="https://punjwanirozina.wixsite.com/rozinapunjwani/portfolio" target="_blank" rel="noopener">More visuals →</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="blog" class="section">
+  <!-- WEBSITE DESIGN CASE STUDIES -->
+  <section id="web" aria-labelledby="web-title">
     <div class="container">
-        <h2>Marketing Stories & Insights</h2>
-        <div class="blog-grid">
-            <div class="blog-card">
-                <div class="blog-card-header">The Mondelez Moment: How One Campaign Changed Everything</div>
-                <div class="blog-card-content">
-                    <p><strong>Preview:</strong> What happens when digital ideation, creative brilliance, and strategic foresight align? The Cadbury launch showed me that marketing isn’t just about promoting products — it’s about building emotional connections and celebrating shared moments...</p>
-                    <details>
-                        <summary style="margin:1rem 0;cursor:pointer;color:#D4AF37;font-weight:bold;">Read Full Story</summary>
-                        <div>
-                            <p>
-                                <strong>Picture this:</strong> It’s 2014, and we're gearing up to digitally launch Cadbury under the Mondelez umbrella in a market brimming with confectionery favorites. The challenge is steep, the competition fierce, and the appetite for digital innovation insatiable.
-                            </p>
-                            <p>
-                                But here's what I learned — compelling campaigns don’t emerge from boardroom debates. They spring from understanding that every consumer has a story, and your brand must earn a place in that narrative.
-                            </p>
-                            <p>
-                                <strong>The Challenge:</strong> How do you make a legacy brand like Cadbury feel digitally fresh without losing its sense of familiarity and trust?<br>
-                                <strong>My Approach:</strong> We didn’t just spotlight chocolate; we spotlighted moments. Moments that make you smile, connect with others, and feel nostalgic — all amplified through digital platforms. Our ideation focused on celebrating the when and why behind indulgence.<br>
-                                <strong>The Execution:</strong> Digital pre-planning became our not-so-secret weapon. We anticipated consumer behavior, tracked sentiment across social media, kept a pulse on competitor chatter, and listened intently to online feedback. Every campaign element was informed by a digitally native strategy.<br>
-                                <strong>The Result:</strong> The buzz wasn’t just loud — it was meaningful. Cadbury became more than a brand in the feed; it became a feeling. Consumers didn’t just engage; they embraced the experience. The conversation around Cadbury was no longer one-sided — it became communal.<br>
-                                <strong>What This Taught Me:</strong> Digital marketing success isn’t just about algorithms or ad impressions. It’s about empathy. When you design with the consumer at the heart, your message resonates like it was handcrafted just for them.
-                            </p>
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-card-header">Marketing Across Cultures: What Dubai Taught Me About Canadian Consumers</div>
-                <div class="blog-card-content">
-                    <p><strong>Preview:</strong> Working across three continents taught me that while cultures differ, human emotions are universal. Here's how understanding Dubai's diverse market prepared me for Toronto's multicultural landscape...</p>
-                    <details>
-                        <summary style="margin:1rem 0;cursor:pointer;color:#D4AF37;font-weight:bold;">Read Full Story</summary>
-                        <div>
-                            <p>
-                                When I first arrived in Dubai, I thought I understood diversity. I was wrong. Dubai didn't just teach me about different cultures -- it taught me about cultural intelligence in marketing.
-                            </p>
-                            <p>
-                                <strong>The Dubai Lesson:</strong> In a city where 85% of residents are expats, successful marketing isn't about choosing one culture over another. It's about finding the human truths that transcend cultural boundaries.<br>
-                                <strong>The Pakistani Foundation:</strong> Growing up in Karachi, I learned that effective communication requires understanding context, not just content. Every message needs to resonate with the audience's lived experience.<br>
-                                <strong>The Canadian Application:</strong> Toronto's multiculturalism isn't just demographic data -- it's a marketing opportunity. The same principles that made campaigns successful in Dubai are now helping me create inclusive campaigns in Canada.<br>
-                                <strong>The Universal Truth:</strong> Whether you're speaking to a Pakistani entrepreneur, an Emirati family, or a Canadian startup, people want to feel understood, valued, and inspired.<br>
-                                <strong>My Philosophy:</strong> Great marketing doesn't translate cultures -- it translates emotions.
-                            </p>
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-card-header">AI + Human Creativity: My Journey into Marketing's Future</div>
-                <div class="blog-card-content">
-                    <p><strong>Preview:</strong> Exploring AI isn’t just about learning new tools — it’s about reimagining what’s possible when human creativity meets machine intelligence. My journey into AI began with curiosity, and it’s leading me toward a future where marketing becomes more insightful, intuitive, and inspired...</p>
-                    <details>
-                        <summary style="margin:1rem 0;cursor:pointer;color:#D4AF37;font-weight:bold;">Read Full Story</summary>
-                        <div>
-                            <p>
-                                Everyone’s talking about AI replacing marketers. I see it differently. AI isn’t competing with human creativity — it’s amplifying it.
-                            </p>
-                            <p>
-                                <strong>Why I Chose to Explore AI:</strong> After years of manually monitoring campaigns, analyzing data, and chasing insights across time zones and channels, I saw an opportunity. AI could handle the repetitive tasks, giving me the freedom to do what humans do best — strategize, create, connect.<br>
-                                <strong>The Learning Journey:</strong> Earned two foundational certifications in Generative AI:
-                                <ul>
-                                    <li>Career Essentials in Generative AI (Microsoft & LinkedIn) — focused on ethical, empathetic marketing applications</li>
-                                    <li>Introduction to Generative AI (Google Cloud Skills Boost) — deepened my understanding of machine learning and generative AI principles</li>
-                                    
-Next up? I’m setting my sights on the MIT Artificial Intelligence certification, diving even deeper into the future of intelligent design and human-AI collaboration.<br>
-                                <strong>Practical Applications:</strong>
-                                <ul>
-                                    <li>AI helps me analyze consumer sentiment across languages and markets</li>
-                                    <li>It creates campaign variations that honor cultural nuance</li>
-                                    <li>It powers real-time optimization that turns performance data into creative momentum</li>
-                                </ul>
-                                <strong>The Human Element:</strong> But here’s what AI can’t replicate: the emotional spark of a mother seeing her child delight in a campaign moment. The thrill of a startup’s first big win. The pride behind every launch you’ve fought for. That’s where human empathy shines — and where marketing finds its magic.<br>
-                                <strong>My Prediction:</strong> The marketers of the future aren’t code-chasers or data crunchers — they’re human-centric strategists empowered by technology. We’re not being replaced. We’re being reimagined.
-                            </p>
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-card-header">From Agency to Broadcaster to Client: The 360° Marketing Experience</div>
-                <div class="blog-card-content">
-                    <p><strong>Preview:</strong> Most marketers view the industry through a single lens. I’ve seen it through five media: advertising, client strategy, digital marketing, and graphic design. And that’s what makes my approach different...</p>
-                    <details>
-                        <summary style="margin:1rem 0;cursor:pointer;color:#D4AF37;font-weight:bold;">Read Full Story</summary>
-                        <div>
-                            <p>
-                                My journey into marketing wasn’t linear — it was lived. Each role shaped my perspective, deepened my understanding, and helped me build campaigns that don’t just look good — they work.
-                            </p>
-                            <p>
-                                <strong>The Graphic Designing Perspective:</strong> As a freelance designer, I learned the language of visual storytelling. It’s where I discovered that brand identity is more than a logo — it’s a feeling, a voice, an experience. Designing across industries taught me to translate concepts into visuals that connect instantly.<br>
-                                <strong>The Agency Perspective:</strong> Working across Omnicom and Starcom gave me a front-row seat to the power of ideas — and the discipline behind their delivery. Advertising taught me how to shape bold concepts; media showed me how to make them land with precision. I learned that creative execution and strategic distribution go hand in hand — because a great idea is only as powerful as its ability to reach and resonate.<br>
-                                <strong>The Broadcaster Perspective:</strong> Being at a broadcaster gave me a front-row seat to storytelling at scale. I saw firsthand how reach, timing, and cultural context converge to create conversations — not just impressions. It helped me recognize the power of content that lives beyond the ad slot.<br>
-                                <strong>The Client Perspective:</strong> On the client side, every creative and media decision had to ladder up to business goals. It was about performance, not just presence. It taught me how to align marketing with KPIs, and how to ensure each campaign moved the needle — not just emotions.<br>
-                                <strong>The Integration:</strong> Now, when I develop campaigns, I think like:
-                                <ul>
-                                    <li>Like a designer: Is this visually authentic?</li>
-                                    <li>Like an advertiser: Is this idea powerful enough to scale?</li>
-                                    <li>Like a media planner: Will it meet the audience where they are?</li>
-                                    <li>Like a broadcaster: Does this story live beyond the screen?</li>
-                                    <li>Like a client: Will it drive tangible results?</li>
-                                </ul>
-                                <strong>The Advantage:</strong> That’s the 360° lens I bring to marketing. It’s not just holistic — it’s personal. Because I haven’t just studied these perspectives. I’ve lived them.
-                            </p>
-                        </div>
-                    </details>
-                </div>
-            </div>
+      <h2 id="web-title">Website design & UX</h2>
+      <p class="sub">Problem → approach → outcome. Linking design choices to performance.</p>
+
+      <div class="case" role="article">
+        <div class="visual">
+          <!-- Replace with actual screenshot -->
+          <img src="a1dynamics-home.jpg" alt="A1Dynamics.com redesigned homepage screenshot"/>
         </div>
-    </div>
-</section>
-
-<section id="podcast" class="section">
-    <div class="container">
-        <h2>Marketing Conversations</h2>
-        <div class="podcast-grid">
-            <div class="podcast-card">
-                <div class="podcast-title">The Power of Listening</div>
-                <div class="podcast-duration">2 minutes</div>
-                <div class="podcast-description">
-                    Discover how truly listening to a client's concerns transformed a rejected campaign into a 25% sales boost. Sometimes the best strategy starts with asking "why?" instead of defending your creative vision.
-                </div>
-                <button class="listen-button" onclick="window.open('https://open.spotify.com/episode/6ctPTdigT9Ipboz8AOgFxu?si=F4gq1CotRAKpxsRUanm-Jg', '_blank')"><span>▶</span>Listen</button>
-            </div>
-            <div class="podcast-card">
-                <div class="podcast-title">When Data Humbles You</div>
-                <div class="podcast-duration">2 minutes</div>
-                <div class="podcast-description">
-                    Learn about the time I fell in love with my own brilliant ideas---only to watch them crash with a 2% engagement rate. This painful but priceless lesson taught me why data should always trump ego in marketing decisions.
-                </div>
-                <button class="listen-button" onclick="window.open('https://open.spotify.com/episode/6Mg0Od3fp3jRhT3D6l0xAs?si=lKkBvAetS5aAS94N_A5uZg', '_blank')"><span>▶</span>Listen</button>
-            </div>
-            <div class="podcast-card">
-                <div class="podcast-title">The Culture Code Crisis</div>
-                <div class="podcast-duration">2 minutes</div>
-                <div class="podcast-description">
-                    Hear about my most expensive cultural mistake when I assumed a successful Pakistani campaign would work in Dubai. This costly lesson taught me that every market has its own heartbeat---and your job is to find the rhythm, not impose your own.
-                </div>
-                <button class="listen-button" onclick="window.open('https://open.spotify.com/episode/67e8AZafv94h3qYmIQPTQ3?si=k7sMan-kRMi31nFpc3Q6SQ', '_blank')"><span>▶</span>Listen</button>
-            </div>
-            <div class="podcast-card">
-                <div class="podcast-title">The Power of Strategic No</div>
-                <div class="podcast-duration">2 minutes</div>
-                <div class="podcast-description">
-                    Sometimes the best thing you can do for a client is save them from their own enthusiasm. Discover how saying "no" to a big-budget, multi-campaign launch actually strengthened a client relationship and exceeded all KPIs.
-                </div>
-                <button class="listen-button" onclick="window.open('https://open.spotify.com/episode/5kh8yYKjYkpLHKrzbY3wLT?si=_3Qvi-qMQOuzGE-Gy2_vEg', '_blank')"><span>▶</span>Listen</button>
-            </div>
+        <div class="copy">
+          <div class="label">Case study</div>
+          <h3>A1Dynamics.com — UX-led redesign</h3>
+          <p>Led information architecture, visual hierarchy, and content modules to reduce friction and improve conversion pathways.</p>
+          <p class="meta">Role: UX/UI, content modules | Tools: WordPress, Elementor</p>
+          <div class="actions">
+            <a class="link" href="https://www.a1dynamics.com" target="_blank" rel="noopener">Visit site →</a>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
 
-<section id="portfolio" class="section">
-    <div class="container">
-        <h2>Work That Speaks</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <div class="portfolio-image">
-                    <a href="https://punjwanirozina.wixsite.com/rozinapunjwani" target="_blank" style="color: white; text-decoration: none;">
-                        View My Graphic Design Portfolio →
-                    </a>
-                </div>
-                <div class="portfolio-content">
-                    <div class="portfolio-title">Graphic Design Projects</div>
-                    <div class="portfolio-description">
-                        Explore my creative visual work including brand identity, digital assets, and marketing materials. Click to view my complete design portfolio.
-                    </div>
-                </div>
-            </div>
+      <div class="case" role="article" style="margin-top:28px">
+        <div class="visual">
+          <!-- Replace with actual screenshot -->
+          <img src="sikyuen-home.jpg" alt="Sikyuen.mu redesigned homepage screenshot"/>
         </div>
-    </div>
-</section>
-
-<section id="skills" class="skills-spotlight">
-    <div class="container">
-        <h2>Skills Spotlight</h2>
-        <div class="skills-icons">
-            <div class="skill-item">📊 <div class="skill-label">Strategic Planning</div></div>
-            <div class="skill-item">🚀 <div class="skill-label">Campaign Execution</div></div>
-            <div class="skill-item">🌍 <div class="skill-label">Cross-Cultural Marketing</div></div>
-            <div class="skill-item">🤖 <div class="skill-label">AI Integration</div></div>
-            <div class="skill-item">👥 <div class="skill-label">Team Leadership</div></div>
-            <div class="skill-item">💡 <div class="skill-label">Creative Strategy</div></div>
+        <div class="copy">
+          <div class="label">Case study</div>
+          <h3>Sikyuen.mu — Content-first UX</h3>
+          <p>Refreshed layout and navigation with emphasis on clarity, mobile performance, and easy content updates.</p>
+          <p class="meta">Role: UX/UI | Tools: CMS</p>
+          <div class="actions">
+            <a class="link" href="https://sikyuen.mu" target="_blank" rel="noopener">Visit site →</a>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="contact" class="section">
+  <!-- TEMPLATES SYSTEMS -->
+  <section id="templates" aria-labelledby="templates-title">
     <div class="container">
-        <h2>Let's Create Something Amazing Together</h2>
-        <div class="contact-content">
-            <div class="contact-message">
-                Ready to work with someone who brings global perspective to local challenges? I'm always excited to connect with fellow marketers, potential collaborators, and organizations looking for fresh perspectives.
+      <h2 id="templates-title">Scalable templates (Canva)</h2>
+      <p class="sub">Systems that non‑design teams can adapt across stores and campaigns.</p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Email</span>
+            <!-- Replace with thumbnail -->
+            <img src="email-template.jpg" alt="Email newsletter template for engaged customers"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Newsletter templates — Engaged & Lapsed segments</div>
+            <div class="desc">Two segment-specific Canva templates with modular blocks for offers, stories, and CTAs.</div>
+            <div class="meta">Deliverable: Editable Canva | Revisions: 2 rounds</div>
+            <div class="actions">
+              <a class="link" href="https://www.canva.com/" target="_blank" rel="noopener">Preview in Canva →</a>
             </div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-label">Email</div>
-                    <div class="contact-value">punjwanirozina@gmail.com</div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">💼</div>
-                    <div class="contact-label">LinkedIn</div>
-                    <div class="contact-value">
-                        <a href="https://www.linkedin.com/in/rozinapunjwani/" target="_blank" style="color: #F39C12; text-decoration: none;">Connect with me</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-label">Location</div>
-                    <div class="contact-value">Toronto, Ontario, Canada</div>
-                </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Social</span>
+            <img src="social-templates.jpg" alt="Social media template set: before/after, testimonial, store image"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Social templates — Before/After, Testimonials, Store highlights</div>
+            <div class="desc">A cohesive set with locked brand elements and flexible content areas for franchises.</div>
+            <div class="meta">Deliverable: Editable Canva | Access level control</div>
+            <div class="actions">
+              <a class="link" href="https://punjwanirozina.wixsite.com/rozinapunjwani/portfolio" target="_blank" rel="noopener">Template set →</a>
             </div>
-            <div class="welcome-message" style="margin-top: 3rem;">
-                <p><strong>Whether you're looking for a marketing strategist, a creative collaborator, or just want to chat about the future of marketing, I'd love to hear from you. Let's create something amazing together!</strong></p>
-                <br />
-                <p style="font-style: italic; opacity: 0.9;">
-                    P.S. - If you've made it this far, you're exactly the kind of person I'd love to work with. Attention to detail and curiosity are qualities I value in both colleagues and clients.
-                </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <span class="badge">Print</span>
+            <img src="catalogue-thumb.jpg" alt="Catalogue/Ebook design thumbnail"/>
+          </div>
+          <div class="card-body">
+            <div class="title">Catalogue / Ebook — Modular layout</div>
+            <div class="desc">Reusable grid systems, cover variations, and styles for 15–28 pages in Canva/Adobe.</div>
+            <div class="meta">Deliverable: Master template + style guide</div>
+            <div class="actions">
+              <a class="link" href="#contact">Request a quote →</a>
             </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="container">
+      <h2 id="about-title">About</h2>
+      <p>Communications strategist and designer with 8+ years across Canada, UAE, and Pakistan. I lead creative that pairs inclusive storytelling with performance goals, and I build systems — not one‑offs — so brands stay consistent at scale.</p>
+      <p class="meta">Skills: Creative direction, brand identity, UX/UI, social & email design, media planning, analytics. Tools: Adobe Suite, Canva, WordPress, Elementor, GA.</p>
+      <div class="actions" style="margin-top:10px">
+        <a class="btn secondary" href="Punjwani-Rozina-Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <a class="btn" href="https://rp747.github.io/rozina-eportfolio/" target="_blank" rel="noopener">Live portfolio →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <h2 id="contact-title">Let’s create something brand-consistent and scalable</h2>
+      <p class="sub">Available for freelance projects, retainers, and template systems.</p>
+      <div class="grid" role="list">
+        <div class="card" role="listitem">
+          <div class="card-body">
+            <div class="title">Email</div>
+            <div class="desc"><a class="link" href="mailto:punjwanirozina@gmail.com">punjwanirozina@gmail.com</a></div>
+          </div>
         </div>
+        <div class="card" role="listitem">
+          <div class="card-body">
+            <div class="title">LinkedIn</div>
+            <div class="desc"><a class="link" href="https://www.linkedin.com/in/rozinapunjwani/" target="_blank" rel="noopener">Connect with me →</a></div>
+          </div>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-body">
+            <div class="title">Location</div>
+            <div class="desc">Toronto, Ontario, Canada</div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<footer style="background: #2C3E50; color: white; padding: 2rem 0; text-align: center; margin-top: 4rem;">
+  <footer role="contentinfo">
     <div class="container">
-        <p>&copy; 2024 Rozina Punjwani. Crafted with passion and powered by global experience.</p>
-        <p style="margin-top: 1rem; opacity: 0.8;">From Karachi to Toronto, building brands that bridge cultures.</p>
+      <p>&copy; 2025 Rozina Punjwani. Design that scales with your brand.</p>
+      <p><a href="https://punjwanirozina.wixsite.com/rozinapunjwani" target="_blank" rel="noopener">Full portfolio on Wix →</a></p>
     </div>
-</footer>
-
-<script>
-function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({
-        behavior: 'smooth'
-    });
-}
-
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        scrollToSection(targetId);
-    });
-});
-
-window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-// Animate sections on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.section').forEach(section => {
-    observer.observe(section);
-});
-
-document.querySelectorAll('.welcome-message').forEach(message => {
-    observer.observe(message);
-});
-
-// Counter Animation Function
-function animateCounter(element, start = 0, end, duration = 2000, suffix = '') {
-    let startTimestamp = null;
-    const step = (timestamp) => {
-        if (!startTimestamp) startTimestamp = timestamp;
-        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-        const value = Math.floor(progress * (end - start) + start);
-        element.innerText = value + suffix;
-        if (progress < 1) {
-            window.requestAnimationFrame(step);
-        } else {
-            element.innerText = end + suffix; // Ensure ending value
-        }
-    };
-    window.requestAnimationFrame(step);
-}
-
-// Animate all counters on load
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.counter').forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target'), 10);
-        const suffix = counter.getAttribute('data-suffix') || '';
-        animateCounter(counter, 0, target, 1600, suffix);
-    });
-});
-
-// Typing effect for hero title
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    type();
-}
-
-window.addEventListener('load', function() {
-    const heroTitle = document.querySelector('.hero h1');
-    const originalText = heroTitle.textContent;
-    setTimeout(() => {
-        typeWriter(heroTitle, originalText, 50);
-    }, 1000);
-});
-</script>
+  </footer>
 </body>
 </html>
