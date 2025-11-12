@@ -1,120 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rozina Punjwani — Creative Director & Graphic Designer</title>
-  <meta name="description" content="Graphic design portfolio of Rozina Punjwani: branding, campaigns, posters, UX/UI website work, and scalable Canva templates for franchises."/>
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg:#111827;
-      --white:#ffffff;
-      --muted:#6b7280;
-      --brand:#D4AF37;
-      --card:#ffffff;
-      --link:#2563eb;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:'Inter',Arial,sans-serif;line-height:1.6;background:#f7f7fb;color:#1f2937}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-
-    nav{position:fixed;top:0;left:0;right:0;z-index:10;background:#111827cc;backdrop-filter:blur(6px)}
-    nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 20px}
-    nav .brand{color:#fff;font-weight:700}
-    nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
-    nav a{color:#e5e7eb;text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px}
-    nav a:hover{background:#1f2937;color:#fff}
-
-    .hero{padding:140px 0 60px;background:linear-gradient(180deg,#0f172a 0%, #111827 100%);color:#e5e7eb;text-align:center}
-    .hero h1{font-size:2.4rem;margin:0 0 10px;color:#fff}
-    .hero p{color:#cbd5e1;max-width:720px;margin:0 auto}
-    .cta{margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    .btn{background:var(--brand);color:#111827;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none}
-    .btn.secondary{background:#1f2937;color:#fff;border:1px solid #374151}
-
-    section{padding:70px 0}
-    section h2{text-align:center;font-size:1.8rem;margin-bottom:24px;color:#111827}
-    .sub{color:#6b7280;text-align:center;margin-top:-12px}
-
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-    .card{background:var(--card);border:1px solid #e5e7eb;border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.06)}
-    .card img{width:100%;height:180px;object-fit:cover}
-    .card-body{padding:14px 16px}
-    .card-body h3{margin:0 0 10px;font-size:1.1rem;color:#111827}
-    .card-body p{margin:0;font-size:0.9rem;color:#555}
-
-    .info-section{max-width:800px;margin:0 auto;text-align:center}
-    .info-card{background:#fff;border-radius:10px;padding:30px;box-shadow:0 4px 12px rgba(0,0,0,0.1);margin-bottom:20px}
-    .info-card p{font-size:1rem;color:#444;line-height:1.6}
-    .info-card a{color:var(--link);text-decoration:none;font-weight:bold}
-    .info-card a:hover{text-decoration:underline}
-
-    footer{background:#0f172a;color:#cbd5e1;padding:40px 0;text-align:center}
-    footer a{color:#fff;text-decoration:none;font-weight:700}
-  </style>
-</head>
-<body>
-
-<nav>
-  <div class="wrap container">
-    <div class="brand">Rozina Punjwani</div>
-    <ul>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#web">Website design</a></li>
-      <li><a href="#templates">Templates</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header class="hero">
+<!-- PORTFOLIO: GRAPHIC DESIGN -->
+<section id="portfolio" aria-labelledby="portfolio-title">
   <div class="container">
-    <h1>Creative Director & Graphic Designer building brand-consistent, scalable systems</h1>
-    <p>I design branding, campaigns, and templates that non‑design teams can adapt confidently.</p>
-    <div class="cta">
-      <a class="btn" href="#portfolio">View featured projects</a>
-      <a class="btn secondary" href="">Download Resume (coming soon)</a>
+    <h2 id="portfolio-title">Featured graphic design</h2>
+    <p class="sub">Branding, campaigns, posters, and social content. Click through for details.</p>
+
+    <div class="grid">
+      <!-- Red Cross -->
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Campaign</span>
+          <img src="red-cross.png" alt="Red Cross awareness campaign poster"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Red Cross — Public awareness visuals</div>
+        </div>
+      </article>
+
+      <!-- Boutique -->
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Branding</span>
+          <img src="boutique.png" alt="Boutique logo and identity system"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Boutique — Logo & identity</div>
+        </div>
+      </article>
+
+      <!-- Florist -->
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Branding</span>
+          <img src="florist.png.png" alt="Florist brand visuals"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Florist — Visual identity</div>
+        </div>
+      </article>
+
+      <!-- Social cause clothing -->
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Campaign</span>
+          <img src="social-cause.png" alt="Social cause clothing brand campaign visuals"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Social cause clothing — Campaign set</div>
+        </div>
+      </article>
+
+      <!-- Suicide awareness -->
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Campaign</span>
+          <img src="suicide-awareness.png" alt="Suicide awareness campaign poster"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Suicide awareness — Sensitive design</div>
+        </div>
+      </article>
+
+      <!-- Event posters -->
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Events</span>
+          <img src="musical-night.png" alt="Musical Night event poster"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Event posters — Musical Night</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Events</span>
+          <img src="fashion-nightwear.png" alt="Fashion Nightwear event poster"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Event posters — Fashion Nightwear</div>
+        </div>
+      </article>
+
+      <!-- Sports shop -->
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Retail</span>
+          <img src="sports-shop.png" alt="Sports shop promotional poster"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Sports shop — Retail promos</div>
+        </div>
+      </article>
+
+      <!-- Awareness days -->
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Awareness</span>
+          <img src="world-diabetes-day.png" alt="World Diabetes Day poster"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Awareness — World Diabetes Day</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Awareness</span>
+          <img src="book-day.png" alt="Book Day poster"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Awareness — Book Day</div>
+        </div>
+      </article>
+
+      <!-- Travel & community -->
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Community</span>
+          <img src="turkey-trip.png" alt="Turkey trip travel poster"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Community — Turkey Trip</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Community</span>
+          <img src="baithak.png" alt="Baithak community event"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Community — Baithak</div>
+        </div>
+      </article>
+
+      <!-- Makeup artist -->
+      <article class="card">
+        <div class="thumb">
+          <span class="badge">Commercial</span>
+          <img src="makeup-artist.png" alt="Makeup artist branding"/>
+        </div>
+        <div class="card-body">
+          <div class="title">Makeup artist — Brand visuals</div>
+        </div>
+      </article>
     </div>
   </div>
-</header>
-
-<section id="portfolio">
-  <h2>Featured Projects</h2>
-  <div class="grid">
-    <div class="card"><img src="red-cross.png" alt="Red Cross"/><div class="card-body"><h3>Red Cross Campaign</h3></div></div>
-    <div class="card"><img src="boutique.png" alt="Boutique"/><div class="card-body"><h3>Boutique Branding</h3></div></div>
-    <div class="card"><img src="florist.png.png" alt="Florist"/><div class="card-body"><h3>Florist Identity</h3></div></div>
-    <div class="card"><img src="social-cause.png" alt="Social cause"/><div class="card-body"><h3>Social Cause Clothing</h3></div></div>
-    <div class="card"><img src="suicide-awareness.png" alt="Suicide awareness"/><div class="card-body"><h3>Suicide Awareness</h3></div></div>
-    <div class="card"><img src="musical-night.png" alt="Musical Night"/><div class="card-body"><h3>Musical Night</h3></div></div>
-    <div class="card"><img src="fashion-nightwear.png" alt="Fashion Nightwear"/><div class="card-body"><h3>Fashion Nightwear</h3></div></div>
-    <div class="card"><img src="sports-shop.png" alt="Sports Shop"/><div class="card-body"><h3>Sports Shop</h3></div></div>
-    <div class="card"><img src="world-diabetes-day.png" alt="World Diabetes Day"/><div class="card-body"><h3>World Diabetes Day</h3></div></div>
-    <div class="card"><img src="book-day.png" alt="Book Day"/><div class="card-body"><h3>Book Day</h3></div></div>
-    <div class="card"><img src="turkey-trip.png" alt="Turkey Trip"/><div class="card-body"><h3>Turkey Trip</h3></div></div>
-    <div class="card"><img src="baithak.png" alt="Baithak"/><div class="card-body"><h3>Baithak</h3></div></div>
-    <div class="card"><img src="makeup-artist.png" alt="Makeup Artist"/><div class="card-body"><h3>Makeup Artist</h3></div></div>
-  </div>
 </section>
 
+<!-- WEBSITE DESIGN CASE STUDIES -->
 <section id="web">
-  <h2>Website design & UX</h2>
-  <div class="case">
-    <div class="visual"><img src="a1dynamics-home.jpg" alt="A1Dynamics.com homepage"/></div>
-    <div class="copy"><h3>A1Dynamics.com — UX-led redesign</h3></div>
-  </div>
-  <div class="case" style="margin-top:28px">
-    <div class="visual"><img src="sikyuen-home.jpg" alt="Sikyuen.mu homepage"/></div>
-    <div class="copy"><h3>Sikyuen.mu — Content-first UX</h3></div>
+  <div class="container">
+    <h2>Website design & UX</h2>
+    <div class="case">
+      <div class="visual">
+        <img src="a1dynamics-home.jpg" alt="A1Dynamics.com homepage screenshot"/>
+      </div>
+      <div class="copy"><h3>A1Dynamics.com — UX-led redesign</h3></div>
+    </div>
+    <div class="case" style="margin-top:28px">
+      <div class="visual">
+        <img src="sikyuen-home.jpg" alt="Sikyuen.mu homepage screenshot"/>
+      </div>
+      <div class="copy"><h3>Sikyuen.mu — Content-first UX</h3></div>
+    </div>
   </div>
 </section>
 
+<!-- TEMPLATES SYSTEMS -->
 <section id="templates">
-  <h2>Scalable templates (Canva)</h2>
-  <div class="grid">
-    <div class="card"><img src="newsletter-templates.png" alt="Newsletter templates"/><div class="card-body"><h3>Newsletter templates — Engaged & Lapsed segments</h3></div></div>
-    <div class="card"><img
+  <div class="container">
+    <h2>Scalable templates (Canva)</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="thumb"><span class="badge">Email</span>
+          <img src="newsletter-templates.png" alt="Newsletter templates preview"/>
+        </div>
+        <div class="card-body"><h3>Newsletter templates — Engaged & Lapsed segments</h3></div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Social</span>
+          <img src="social-templates.jpg" alt="Social media templates preview"/>
+        </div>
+        <div class="card-body"><h3>Social templates — Before/After, Testimonials, Store highlights</h3></div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Print</span>
+          <img src="catalogue-template.jpg" alt="Catalogue/Ebook template preview"/>
+        </div>
+        <div class="card-body"><h3>Catalogue / Ebook — Modular layout</h3></div>
+      </article>
+    </div>
+  </div>
+</section>
