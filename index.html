@@ -3,117 +3,105 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rozina Punjwani — Graphic Design Portfolio</title>
+  <title>Rozina Punjwani — Creative Director & Graphic Designer</title>
+  <meta name="description" content="Graphic design portfolio of Rozina Punjwani: branding, campaigns, posters, UX/UI website work, and scalable Canva templates for franchises."/>
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {font-family: Arial, sans-serif; margin:0; background:#f7f7f7; color:#333;}
-    header {background:#111827; color:#fff; padding:60px 20px; text-align:center;}
-    header h1 {margin:0; font-size:2.2rem;}
-    header p {margin-top:10px; color:#cbd5e1;}
-    nav {background:#1f2937; padding:10px; text-align:center;}
-    nav a {color:#fff; margin:0 10px; text-decoration:none; font-weight:bold;}
-    section {padding:60px 20px;}
-    h2 {text-align:center; margin-bottom:30px; color:#111827;}
-    .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
-    .card {background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
-    .card img {width:100%; height:180px; object-fit:cover;}
-    .card-body {padding:15px;}
-    .card-body h3 {margin:0 0 10px; font-size:1.1rem; color:#111827;}
-    .card-body p {margin:0; font-size:0.9rem; color:#555;}
-    footer {background:#111827; color:#cbd5e1; text-align:center; padding:20px;}
-    footer a {color:#fff; text-decoration:none; font-weight:bold;}
+    :root{
+      --bg1:#0f172a;
+      --bg2:#111827;
+      --white:#ffffff;
+      --muted:#6b7280;
+      --brand:#D4AF37;
+      --accent:#7c3aed;
+      --card:#ffffff;
+      --link:#2563eb;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:'Inter',Arial,sans-serif; line-height:1.6; color:#1f2937; background:#f7f7fb}
+
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
+
+    nav{position:fixed; top:0; left:0; right:0; z-index:10; background:#111827cc; backdrop-filter:blur(6px); border-bottom:1px solid #1f2937;}
+    nav .wrap{display:flex; align-items:center; justify-content:space-between; padding:12px 20px}
+    nav .brand{color:var(--white); font-weight:700;}
+    nav ul{display:flex; gap:20px; list-style:none; margin:0; padding:0}
+    nav a{color:#e5e7eb; text-decoration:none; font-weight:600; padding:8px 12px; border-radius:8px}
+    nav a:hover{background:#1f2937; color:#fff}
+
+    .hero{padding:140px 0 60px; background:linear-gradient(180deg,#0f172a 0%, #111827 100%); color:#e5e7eb; text-align:center}
+    .hero h1{font-size:2.4rem; margin:0 0 10px; color:#fff}
+    .hero p{color:#cbd5e1; max-width:720px; margin:0 auto}
+    .cta{margin-top:20px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+    .btn{background:var(--brand); color:#111827; padding:10px 16px; border-radius:10px; font-weight:700; text-decoration:none}
+    .btn.secondary{background:#1f2937; color:#fff; border:1px solid #374151}
+
+    section{padding:70px 0}
+    section h2{text-align:center; font-size:1.8rem; margin-bottom:24px; color:#111827}
+    .sub{color:#6b7280; text-align:center; margin-top:-12px}
+
+    .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:20px}
+    .card{background:var(--card); border:1px solid #e5e7eb; border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.06)}
+    .card img{width:100%; height:180px; object-fit:cover}
+    .card-body{padding:14px 16px}
+    .card-body h3{margin:0 0 10px; font-size:1.1rem; color:#111827}
+    .card-body p{margin:0; font-size:0.9rem; color:#555}
+
+    .case{display:grid; grid-template-columns:1.2fr .8fr; gap:24px}
+    @media(max-width:860px){.case{grid-template-columns:1fr}}
+
+    footer{background:#0f172a; color:#cbd5e1; padding:40px 0; text-align:center}
+    footer a{color:#fff; text-decoration:none; font-weight:700}
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Rozina Punjwani</h1>
-  <p>Creative Director & Graphic Designer | Building scalable, brand-consistent visuals</p>
-  <nav>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav aria-label="Primary">
+  <div class="wrap container">
+    <div class="brand">Rozina Punjwani</div>
+    <ul>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#web">Website design</a></li>
+      <li><a href="#templates">Templates</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Connect</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container">
+    <h1>Creative Director & Graphic Designer building brand-consistent, scalable systems</h1>
+    <p>I design branding, campaigns, and templates that non‑design teams can adapt confidently.</p>
+    <div class="cta">
+      <a class="btn" href="#portfolio">View featured projects</a>
+      <a class="btn secondary" href="">Download Resume (coming soon)</a>
+    </div>
+  </div>
 </header>
 
 <section id="portfolio">
   <h2>Featured Projects</h2>
   <div class="grid">
-    <div class="card">
-      <img src="red-cross.png" alt="Red Cross awareness campaign"/>
-      <div class="card-body"><h3>Red Cross Campaign</h3><p>Public safety visuals designed for clarity and accessibility.</p></div>
-    </div>
-    <div class="card">
-      <img src="boutique.png" alt="Boutique branding"/>
-      <div class="card-body"><h3>Boutique Branding</h3><p>Logo and identity system for a lifestyle brand.</p></div>
-    </div>
-    <div class="card">
-      <img src="florist.png.png" alt="Florist branding"/>
-      <div class="card-body"><h3>Florist Identity</h3><p>Delicate branding with floral motifs.</p></div>
-    </div>
-    <div class="card">
-      <img src="social-cause.png" alt="Social cause clothing brand"/>
-      <div class="card-body"><h3>Social Cause Clothing</h3><p>Campaign visuals for nonprofit clothing brand.</p></div>
-    </div>
-    <div class="card">
-      <img src="suicide-awareness.png" alt="Suicide awareness campaign"/>
-      <div class="card-body"><h3>Suicide Awareness</h3><p>Empathetic design for public awareness.</p></div>
-    </div>
-    <div class="card">
-      <img src="musical-night.png" alt="Musical Night poster"/>
-      <div class="card-body"><h3>Musical Night</h3><p>Event poster with bold typography and visuals.</p></div>
-    </div>
-    <div class="card">
-      <img src="fashion-nightwear.png" alt="Fashion Nightwear poster"/>
-      <div class="card-body"><h3>Fashion Nightwear</h3><p>Event branding for fashion showcase.</p></div>
-    </div>
-    <div class="card">
-      <img src="sports-shop.png" alt="Sports shop poster"/>
-      <div class="card-body"><h3>Sports Shop</h3><p>Retail promotional poster design.</p></div>
-    </div>
-    <div class="card">
-      <img src="world-diabetes-day.png" alt="World Diabetes Day poster"/>
-      <div class="card-body"><h3>World Diabetes Day</h3><p>Educational awareness poster.</p></div>
-    </div>
-    <div class="card">
-      <img src="book-day.png" alt="Book Day poster"/>
-      <div class="card-body"><h3>Book Day</h3><p>Campaign visuals for literacy awareness.</p></div>
-    </div>
-    <div class="card">
-      <img src="turkey-trip.png" alt="Turkey trip poster"/>
-      <div class="card-body"><h3>Turkey Trip</h3><p>Travel campaign poster.</p></div>
-    </div>
-    <div class="card">
-      <img src="baithak.png" alt="Baithak community event"/>
-      <div class="card-body"><h3>Baithak</h3><p>Community event branding.</p></div>
-    </div>
-    <div class="card">
-      <img src="makeup-artist.png" alt="Makeup artist branding"/>
-      <div class="card-body"><h3>Makeup Artist</h3><p>Brand visuals for beauty professional.</p></div>
-    </div>
+    <div class="card"><img src="red-cross.png" alt="Red Cross"/><div class="card-body"><h3>Red Cross Campaign</h3><p>Public safety visuals designed for clarity and accessibility.</p></div></div>
+    <div class="card"><img src="boutique.png" alt="Boutique"/><div class="card-body"><h3>Boutique Branding</h3><p>Logo and identity system for a lifestyle brand.</p></div></div>
+    <div class="card"><img src="florist.png.png" alt="Florist"/><div class="card-body"><h3>Florist Identity</h3><p>Delicate branding with floral motifs.</p></div></div>
+    <div class="card"><img src="social-cause.png" alt="Social cause"/><div class="card-body"><h3>Social Cause Clothing</h3><p>Campaign visuals for nonprofit clothing brand.</p></div></div>
+    <div class="card"><img src="suicide-awareness.png" alt="Suicide awareness"/><div class="card-body"><h3>Suicide Awareness</h3><p>Empathetic design for public awareness.</p></div></div>
+    <div class="card"><img src="musical-night.png" alt="Musical Night"/><div class="card-body"><h3>Musical Night</h3><p>Event poster with bold typography and visuals.</p></div></div>
+    <div class="card"><img src="fashion-nightwear.png" alt="Fashion Nightwear"/><div class="card-body"><h3>Fashion Nightwear</h3><p>Event branding for fashion showcase.</p></div></div>
+    <div class="card"><img src="sports-shop.png" alt="Sports Shop"/><div class="card-body"><h3>Sports Shop</h3><p>Retail promotional poster design.</p></div></div>
+    <div class="card"><img src="world-diabetes-day.png" alt="World Diabetes Day"/><div class="card-body"><h3>World Diabetes Day</h3><p>Educational awareness poster.</p></div></div>
+    <div class="card"><img src="book-day.png" alt="Book Day"/><div class="card-body"><h3>Book Day</h3><p>Campaign visuals for literacy awareness.</p></div></div>
+    <div class="card"><img src="turkey-trip.png" alt="Turkey Trip"/><div class="card-body"><h3>Turkey Trip</h3><p>Travel campaign poster.</p></div></div>
+    <div class="card"><img src="baithak.png" alt="Baithak"/><div class="card-body"><h3>Baithak</h3><p>Community event branding.</p></div></div>
+    <div class="card"><img src="makeup-artist.png" alt="Makeup Artist"/><div class="card-body"><h3>Makeup Artist</h3><p>Brand visuals for beauty professional.</p></div></div>
   </div>
 </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <div class="container">
-    <p>Communications strategist and designer with 8+ years across Canada, UAE, and Pakistan. I specialize in creating scalable, brand-consistent assets that empower teams and drive engagement.</p>
-    <p><a href="">Download Resume (coming soon)</a></p>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="container" style="text-align:center;">
-    <p>Email: <a href="mailto:punjwanirozina@gmail.com">punjwanirozina@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/rozinapunjwani/" target="_blank">linkedin.com/in/rozinapunjwani</a></p>
-    <p>Location: Toronto, Canada</p>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 Rozina Punjwani. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
+<section id
